@@ -1,0 +1,3 @@
+{"metric": "n_clusters", "value": 20, "subject": "data/hao2021_10k/.cfad207e/pipeline/reference/.31d5c367", "rep": null, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 20, "subject": "data/hao2021_10k/.cfad207e/pipeline/exact-ref/.74170245", "rep": null, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 21, "subject": "data/hao2021_10k/.cfad207e/pipeline/exact-ref/.dda71834", "rep": null, "attrs": {"n_cells": 9999}}
