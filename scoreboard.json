@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-09T14:05:10+0200",
+ "generated": "2026-10-09T14:13:05+0200",
  "entries": [
   {
    "entry": "btraven00/exact-ref",
@@ -16,9 +16,9 @@
    "walltime_mean": 2.024,
    "walltime_sd": 0.046,
    "n": 11,
-   "cluster": 0.18,
-   "warmup_knn": 3.67,
    "warmup_cluster": 0.197,
+   "warmup_knn": 3.67,
+   "cluster": 0.18,
    "pca": 1.676,
    "warmup_pca": 0.801,
    "knn": 0.163,
@@ -50,11 +50,11 @@
    "walltime_sd": 0.088,
    "n": 11,
    "knn": 0.172,
-   "warmup_pca": 0.823,
    "cluster": 0.186,
-   "pca": 1.684,
-   "warmup_cluster": 0.197,
    "warmup_knn": 3.686,
+   "warmup_pca": 0.823,
+   "warmup_cluster": 0.197,
+   "pca": 1.684,
    "warmup": 4.71,
    "peak_ram_mb": 597.5,
    "rss_peak_mb": 558.8,
