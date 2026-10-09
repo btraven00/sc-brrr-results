@@ -1,0 +1,36 @@
+# Modules used in this benchmark
+# Generated: 2026-10-09 12:25:34.090862
+#
+# Format: stage/module - repository@commit
+#
+
+data/hao2021_10k:
+  Repository: https://github.com/btraven00/omni-data
+  Commit: b4d6c62d1afe1a1159b83b35ec9c7a94d85626b3
+  Module dir: .modules/omni-data/b4d6c62
+  Entrypoint: download.sh
+
+pipeline/reference:
+  Repository: /bench
+  Commit: 6dcd310de497305701db6f477174e4525db9b1f2
+  Module dir: .modules/bench/6dcd310
+  Entrypoint: baselines/reference.sh
+
+pipeline/exact-ref:
+  Repository: /bench
+  Commit: 6dcd310de497305701db6f477174e4525db9b1f2
+  Module dir: .modules/bench/6dcd310
+  Entrypoint: baselines/reference.sh
+
+metrics/n_clusters:
+  Repository: /bench
+  Commit: 6dcd310de497305701db6f477174e4525db9b1f2
+  Module dir: .modules/bench/6dcd310
+  Entrypoint: metrics/clusters.py
+
+metrics/contract:
+  Repository: /bench
+  Commit: 6dcd310de497305701db6f477174e4525db9b1f2
+  Module dir: .modules/bench/6dcd310
+  Entrypoint: metrics/contract.py
+
