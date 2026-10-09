@@ -1,0 +1,42 @@
+Installed 1 package in 36ms
+hao2021_10k.h5ad: downloading https://huggingface.co/datasets/btraven/sc-brrr-hao2021/resolve/a61cd45f32445b9a84b6e003d64e463712fbf5af/hao2021_10k.h5ad ... sha256 ok
+setup (network on) ...
+data_hao2021_10k_68c8db81 (2 cores, 6144 MB, 30 min) ... ok
+data_hao2021_10k_68c8db81_pipeline_reference_31d5c367 (8 cores, 6144 MB, 20 min) ... ok
+data_hao2021_10k_68c8db81_pipeline_exact_ref_74170245 (8 cores, 6144 MB, 5 min) ... ok
+data_hao2021_10k_68c8db81_pipeline_exact_ref_dda71834 (8 cores, 6144 MB, 5 min) ... ok
+metrics_n_clusters_hao2021_10k_default (2 cores, 6144 MB, 30 min) ... ok
+metrics_contract_hao2021_10k_default (2 cores, 6144 MB, 30 min) ... ok
+
+job                                          end                 wall     mem peak / cap    denet  growth/rep      env
+data_hao2021_10k_68c8db81                    ok                  2.8s      132 / 6144   MB      0MB           -    220MB
+pipeline_reference_31d5c367                  ok                 15.9s      525 / 6144   MB    560MB           -    1.1GB
+pipeline_exact_ref_74170245                  ok                 27.9s      560 / 6144   MB    566MB     +1.2 MB    1.1GB
+pipeline_exact_ref_dda71834                  ok                 24.9s      551 / 6144   MB    566MB     +1.6 MB    1.1GB
+metrics_n_clusters_hao2021_10k_default       ok                  2.7s      123 / 6144   MB      0MB           -    1.1GB
+metrics_contract_hao2021_10k_default         ok                  3.6s      163 / 6144   MB      0MB           -    1.1GB
+6/6 jobs ok -> <repo>/runs/btraven00-exact-ref-0.1.5-10k-20261009T163144/results
+Downloading polars-runtime-32 (52.0MiB)
+ Downloaded polars-runtime-32
+Installed 3 packages in 21ms
+shape: (33, 4)
+┌────────────────────────┬─────────────┬─────┬────────┐
+│ metric                 ┆ method      ┆ n   ┆ median │
+│ ---                    ┆ ---         ┆ --- ┆ ---    │
+│ str                    ┆ str         ┆ u32 ┆ f64    │
+╞════════════════════════╪═════════════╪═════╪════════╡
+│ contract_ok            ┆ exact-ref   ┆ 39  ┆ 1.0    │
+│ contract_ok            ┆ reference   ┆ 6   ┆ 1.0    │
+│ cpu_s                  ┆ null        ┆ 2   ┆ 2.75   │
+│ cpu_s                  ┆ exact-ref   ┆ 2   ┆ 38.7   │
+│ cpu_s                  ┆ hao2021_10k ┆ 1   ┆ 2.1    │
+│ …                      ┆ …           ┆ …   ┆ …      │
+│ step_walltime_s        ┆ reference   ┆ 3   ┆ 2.162  │
+│ walltime_s             ┆ exact-ref   ┆ 11  ┆ 2.419  │
+│ walltime_s             ┆ reference   ┆ 1   ┆ 11.057 │
+│ warmup_step_walltime_s ┆ exact-ref   ┆ 6   ┆ 0.9995 │
+│ warmup_walltime_s      ┆ exact-ref   ┆ 2   ┆ 6.158  │
+└────────────────────────┴─────────────┴─────┴────────┘
+139 records -> <repo>/runs/btraven00-exact-ref-0.1.5-10k-20261009T163144/results/metrics.parquet
+btraven00/exact-ref 0.1.5 (f6ea2d7) plan b27def36 host c931f405 10k: ok (run btraven00-exact-ref-0.1.5-10k-20261009T163144)
+OUTCOME {"outcome": "ok", "reason": "btraven00/exact-ref 0.1.5 (f6ea2d7) plan b27def36 host c931f405 10k: ok (run btraven00-exact-ref-0.1.5-10k-20261009T163144)", "result": "btraven00/exact-ref/0.1.5/b27def36/c931f405/10k", "plan": "b27def36", "host": "c931f405", "run": "btraven00-exact-ref-0.1.5-10k-20261009T163144", "log": "<repo>/runs/btraven00-exact-ref-0.1.5-10k-20261009T163144/runner.log"}
