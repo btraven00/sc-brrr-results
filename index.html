@@ -13,7 +13,7 @@
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink);
          font: 13px/1.5 ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace; }
-  main { max-width: 1200px; margin: 0 auto; padding: 32px 16px 64px; }
+  main { max-width: 1320px; margin: 0 auto; padding: 32px 16px 64px; }
   h1 { font-size: 18px; margin: 0 0 4px; }
   h2 { font-size: 14px; margin: 40px 0 8px; border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
   p { color: var(--mute); margin: 0 0 8px; max-width: 80ch; }
@@ -52,6 +52,7 @@
      Bloat (env size, packages) is shown, not ranked. Fidelity gate not computed yet: every entry is listed.
      Click a column to sort.</p>
   <div class="controls"><label>input size <select id="size"></select></label>
+    <label>host <select id="host"></select></label>
     <a class="dl" href="results.parquet" download>download all results (parquet)</a></div>
   <div id="boards"><p>loading scoreboard.json …</p></div>
   <footer id="foot"></footer>
@@ -59,7 +60,7 @@
 <script>
 const COLS = [
   // entry carries tool · runtime · device underneath, version its commit and time its n, as tooltips
-  ["entry", "entry"], ["version", "ver"], ["size", "size"], ["status", "status"],
+  ["entry", "entry"], ["version", "ver"], ["size", "size / host"], ["status", "status"],
   ["walltime", "time/rep", 3], ["walltime_sd", "± sd", 3],
   ["pca", "pca", 3], ["knn", "knn", 3], ["cluster", "cluster", 3],
   ["warmup", "warm-up", 1], ["peak_ram_mb", "RAM MB", 0], ["growth_mb", "growth", 1],
@@ -75,7 +76,7 @@ function cell(e, [k, , dp], max) {
   if (k === "contract_failed") return v == null ? `<td class="dim">–</td>` : `<td class="${v ? "bad" : "ok"}">${v ? v + " failed" : "ok"}</td>`;
   if (k === "entry") return `<td title="${esc(e.label)}">${esc(v)}<small>${[e.tool, e.runtime, e.device].map(x => esc(x ?? "?")).join(" · ")}</small></td>`;
   if (k === "submitted") return `<td class="dim" title="submitted ${esc(v ?? "?")}, scored ${esc(e.scored)}">${esc(v?.slice(0, 10) ?? "–")}<small>scored ${esc(e.scored?.slice(0, 10))}</small></td>`;
-  if (k === "size") return `<td class="dim">${esc(v)}</td>`;
+  if (k === "size") return `<td class="dim" title="host ${esc(e.host)}: ${esc([e.cpu_model, e.gpu].filter(Boolean).join(" + ") || "no host facts recorded")}">${esc(v)}<small>${esc(e.host)}</small></td>`;
   if (k === "version") return `<td class="dim" title="commit ${esc(e.commit)}">${esc(v)}</td>`;
   if (dp === undefined) return `<td class="dim">${esc(v)}</td>`;
   if (v == null) return `<td class="num dim">–</td>`;
@@ -111,7 +112,9 @@ const embed = (el, spec) => vegaEmbed(el, { $schema: "https://vega.github.io/sch
   config: CFG, ...spec }, { actions: false });
 
 function charts(rows, reps, el) {
-  const label = r => `${r.entry} ${r.version} · ${r.size}`;
+  // size and host in the label only when the shown results differ in them
+  const varies = k => new Set(rows.map(r => r[k])).size > 1;
+  const label = r => [`${r.entry} ${r.version}`, ...["size", "host"].filter(varies).map(k => r[k])].join(" · ");
   el.innerHTML = `<div><h3>time per replicate (s), every replicate</h3><div class="c1"></div></div>
     <div><h3>median step time (s)</h3><div class="c2"></div></div>
     <div><h3>time vs peak RAM (dot size: env MB)</h3><div class="c3"></div></div>`;
@@ -147,24 +150,29 @@ const cellsOf = sz => parseFloat(sz) * ({ k: 1e3, m: 1e6 }[sz.slice(-1).toLowerC
 fetch("scoreboard.json").then(r => r.json()).then(({ generated, entries, reps }) => {
   entries.forEach(e => e.cells = cellsOf(e.size));
   const sizes = [...new Set(entries.map(e => e.size))].sort((a, b) => cellsOf(a) - cellsOf(b));
-  const pick = document.getElementById("size");
+  const pick = document.getElementById("size"), hostPick = document.getElementById("host");
   pick.innerHTML = `<option value="">all</option>` + sizes.map(z => `<option>${esc(z)}</option>`).join("");
+  const hosts = {};
+  entries.forEach(e => hosts[e.host] ??= [e.cpu_model, e.gpu].filter(Boolean).join(" + "));
+  hostPick.innerHTML = `<option value="">all</option>` + Object.entries(hosts).sort()
+    .map(([h, hw]) => `<option value="${esc(h)}">${esc(h)}${hw ? " · " + esc(hw) : ""}</option>`).join("");
   const boards = document.getElementById("boards");
   const render = () => {
-    const size = pick.value, rows = entries.filter(e => !size || e.size === size);
+    const size = pick.value, hid = hostPick.value;
+    const rows = entries.filter(e => (!size || e.size === size) && (!hid || e.host === hid));
     const groups = {};
     rows.forEach(e => (groups[e.plan] ??= []).push(e));
     boards.innerHTML = rows.length ? "" : "<p>no results yet</p>";
     Object.entries(groups).sort().forEach(([plan, rs]) => {
       const sec = document.createElement("section");
-      sec.innerHTML = `<h2>plan ${esc(plan)} <span class="dim">· ${size ? esc(size) + " cells" : "all sizes"} · ${rs.length} result${rs.length === 1 ? "" : "s"}</span></h2>
+      sec.innerHTML = `<h2>plan ${esc(plan)} <span class="dim">· ${size ? esc(size) + " cells" : "all sizes"} · ${hid ? "host " + esc(hid) : "all hosts"} · ${rs.length} result${rs.length === 1 ? "" : "s"}</span></h2>
         <div class="wrap"></div><div class="charts"></div>`;
       boards.append(sec);
       table(rs, sec.querySelector(".wrap"));
-      charts(rs, reps.filter(r => r.plan === plan && (!size || r.size === size)), sec.querySelector(".charts"));
+      charts(rs, reps.filter(r => r.plan === plan && (!size || r.size === size) && (!hid || r.host === hid)), sec.querySelector(".charts"));
     });
   };
-  pick.onchange = render;
+  pick.onchange = hostPick.onchange = render;
   render();
   document.getElementById("foot").innerHTML = `generated ${esc(generated)} from ${entries.length} scored versions · download:
     <a href="results.parquet" download>results.parquet</a> (every record, long format) ·
