@@ -19,7 +19,9 @@
   p { color: var(--mute); margin: 0 0 8px; max-width: 80ch; }
   .wrap { overflow-x: auto; }
   table { border-collapse: collapse; width: 100%; white-space: nowrap; }
-  th, td { padding: 4px 10px; text-align: left; border-bottom: 1px solid var(--rule); }
+  table { font-size: 12px; }
+  th, td { padding: 4px 7px; text-align: left; border-bottom: 1px solid var(--rule); vertical-align: top; }
+  td small { display: block; color: var(--mute); font-size: 11px; }
   th { font-weight: 600; cursor: pointer; user-select: none; color: var(--mute); position: sticky; top: 0; background: var(--bg); }
   th:hover, th.on { color: var(--ink); }
   th.on::after { content: attr(data-dir); margin-left: 4px; }
@@ -29,6 +31,8 @@
   td.dim, .dim { color: var(--mute); }
   .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 24px; margin-top: 20px; }
   .charts h3 { font-size: 12px; font-weight: 600; margin: 0 0 6px; color: var(--mute); }
+  .controls { margin: 20px 0 0; }
+  select { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--rule); padding: 2px 6px; margin-left: 6px; }
   footer { margin-top: 48px; color: var(--mute); }
 </style>
 </head>
@@ -37,18 +41,22 @@
   <h1>sc-brrr scoreboard</h1>
   <p>PCA → kNN → Leiden on single-cell data. Lower is better everywhere. Times are per replicate, in seconds:
      the median over same-seed and different-seed replicates; warm-up is the one-off cold start (imports, JIT, GPU init).
+     Growth: memory added per replicate (MB). Device comes from the entry's declared capabilities.
      Bloat (env size, packages) is shown, not ranked. Fidelity gate not computed yet: every entry is listed.
      Click a column to sort.</p>
+  <div class="controls"><label>input size <select id="size"></select></label></div>
   <div id="boards"><p>loading scoreboard.json …</p></div>
   <footer id="foot"></footer>
 </main>
 <script>
 const COLS = [
-  ["entry", "entry"], ["version", "version"], ["commit", "commit"], ["status", "status"],
-  ["walltime", "time/rep", 3], ["walltime_sd", "± sd", 3], ["n", "n", 0],
+  // entry carries tool · runtime · device underneath, version its commit and time its n, as tooltips
+  ["entry", "entry"], ["version", "ver"], ["size", "size"], ["status", "status"],
+  ["walltime", "time/rep", 3], ["walltime_sd", "± sd", 3],
   ["pca", "pca", 3], ["knn", "knn", 3], ["cluster", "cluster", 3],
-  ["warmup", "warm-up", 1], ["peak_ram_mb", "peak RAM MB", 0], ["growth_mb", "growth/rep MB", 1],
-  ["env_mb", "env MB", 0], ["packages", "pkgs", 0], ["n_clusters", "clusters", 0], ["contract_failed", "contract", 0],
+  ["warmup", "warm-up", 1], ["peak_ram_mb", "RAM MB", 0], ["growth_mb", "growth", 1],
+  ["env_mb", "env MB", 0], ["packages", "pkgs", 0], ["n_clusters", "clust", 0], ["contract_failed", "contract", 0],
+  ["submitted", "submitted"],   // date; the scoring date underneath
 ];
 const BARS = new Set(["walltime", "pca", "knn", "cluster", "warmup", "peak_ram_mb", "env_mb", "packages"]);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"})[c]);
@@ -57,20 +65,24 @@ function cell(e, [k, , dp], max) {
   const v = e[k];
   if (k === "status") return `<td class="${v === "ok" ? "ok" : "bad"}">${esc(v)}</td>`;
   if (k === "contract_failed") return v == null ? `<td class="dim">–</td>` : `<td class="${v ? "bad" : "ok"}">${v ? v + " failed" : "ok"}</td>`;
-  if (k === "entry") return `<td title="${esc(e.label)}">${esc(v)}</td>`;
+  if (k === "entry") return `<td title="${esc(e.label)}">${esc(v)}<small>${[e.tool, e.runtime, e.device].map(x => esc(x ?? "?")).join(" · ")}</small></td>`;
+  if (k === "submitted") return `<td class="dim" title="submitted ${esc(v ?? "?")}, scored ${esc(e.scored)}">${esc(v?.slice(0, 10) ?? "–")}<small>scored ${esc(e.scored?.slice(0, 10))}</small></td>`;
+  if (k === "size") return `<td class="dim">${esc(v)}</td>`;
+  if (k === "version") return `<td class="dim" title="commit ${esc(e.commit)}">${esc(v)}</td>`;
   if (dp === undefined) return `<td class="dim">${esc(v)}</td>`;
   if (v == null) return `<td class="num dim">–</td>`;
   const w = BARS.has(k) && max[k] ? (100 * v / max[k]).toFixed(1) + "%" : "0%";
-  return `<td class="num" style="--w:${w}">${Number(v).toFixed(dp)}</td>`;
+  return `<td class="num" style="--w:${w}"${k === "walltime" ? ` title="median of ${e.n} replicates"` : ""}>${Number(v).toFixed(dp)}</td>`;
 }
 
 function table(rows, el) {
   const max = Object.fromEntries(COLS.map(([k]) => [k, Math.max(0, ...rows.map(r => r[k] ?? 0))]));
   let key = "walltime", dir = 1;
   const draw = () => {
+    const val = e => key === "size" ? e.cells : e[key];
     // failed entries last, then by the chosen column; missing values sink
     const s = [...rows].sort((a, b) => (a.status !== "ok") - (b.status !== "ok")
-      || ((a[key] == null) - (b[key] == null)) || (a[key] < b[key] ? -dir : a[key] > b[key] ? dir : 0));
+      || ((a[key] == null) - (b[key] == null)) || (val(a) < val(b) ? -dir : val(a) > val(b) ? dir : 0));
     el.innerHTML = `<table><thead><tr>${COLS.map(([k, h]) =>
       `<th data-k="${k}" class="${k === key ? "on" : ""}" data-dir="${dir > 0 ? "▲" : "▼"}">${h}</th>`).join("")}</tr></thead>
       <tbody>${s.map(e => `<tr>${COLS.map(c => cell(e, c, max)).join("")}</tr>`).join("")}</tbody></table>`;
@@ -82,7 +94,7 @@ function table(rows, el) {
 }
 
 const CFG = { background: null, font: "ui-monospace, Menlo, monospace",
-  axis: { labelColor: "#23211c", titleColor: "#77725f", gridColor: "#e9e2cf", domainColor: "#bfb69c", tickColor: "#bfb69c" },
+  axis: { labelLimit: 320, labelColor: "#23211c", titleColor: "#77725f", gridColor: "#e9e2cf", domainColor: "#bfb69c", tickColor: "#bfb69c" },
   legend: { labelColor: "#23211c", titleColor: "#77725f" }, view: { stroke: null },
   range: { category: ["#4c6a92", "#c07a2c", "#5d8c5a", "#a64b4b", "#7d6aa0", "#8a7b55"] } };
 // a fixed width from the box (vega's "container" sizing measures too early in a fresh grid)
@@ -91,7 +103,7 @@ const embed = (el, spec) => vegaEmbed(el, { $schema: "https://vega.github.io/sch
   config: CFG, ...spec }, { actions: false });
 
 function charts(rows, reps, el) {
-  const label = r => `${r.entry} ${r.version}`;
+  const label = r => `${r.entry} ${r.version} · ${r.size}`;
   el.innerHTML = `<div><h3>time per replicate (s), every replicate</h3><div class="c1"></div></div>
     <div><h3>median step time (s)</h3><div class="c2"></div></div>
     <div><h3>time vs peak RAM (dot size: env MB)</h3><div class="c3"></div></div>`;
@@ -109,7 +121,8 @@ function charts(rows, reps, el) {
   embed(el.querySelector(".c2"), { data: { values: steps }, height: { step: 22 }, mark: "bar",
     encoding: { x: { field: "value", type: "quantitative", title: null, stack: true },
                 y: { field: "who", type: "nominal", title: null },
-                color: { field: "step", type: "nominal", sort: ["pca", "knn", "cluster"], title: null },
+                color: { field: "step", type: "nominal", sort: ["pca", "knn", "cluster"], title: null,
+                         legend: { orient: "bottom", direction: "horizontal" } },
                 order: { field: "i" },   // pipeline order, not alphabetical
                 tooltip: [{ field: "who" }, { field: "step" }, { field: "value", format: ".3f" }] } });
   embed(el.querySelector(".c3"), { data: { values: rows.filter(r => r.walltime != null).map(r => ({ ...r, who: label(r) })) },
@@ -121,21 +134,30 @@ function charts(rows, reps, el) {
                 tooltip: [{ field: "who" }, { field: "walltime" }, { field: "peak_ram_mb" }, { field: "env_mb" }] } });
 }
 
+const cellsOf = sz => parseFloat(sz) * ({ k: 1e3, m: 1e6 }[sz.slice(-1).toLowerCase()] ?? 1);   // "50k" -> 50000
+
 fetch("scoreboard.json").then(r => r.json()).then(({ generated, entries, reps }) => {
+  entries.forEach(e => e.cells = cellsOf(e.size));
+  const sizes = [...new Set(entries.map(e => e.size))].sort((a, b) => cellsOf(a) - cellsOf(b));
+  const pick = document.getElementById("size");
+  pick.innerHTML = `<option value="">all</option>` + sizes.map(z => `<option>${esc(z)}</option>`).join("");
   const boards = document.getElementById("boards");
-  const groups = {};
-  entries.forEach(e => (groups[`${e.size} ${e.plan}`] ??= []).push(e));
-  boards.innerHTML = "";
-  Object.entries(groups).sort().forEach(([g, rows]) => {
-    const [size, plan] = g.split(" ");
-    const sec = document.createElement("section");
-    sec.innerHTML = `<h2>${esc(size)} cells <span class="dim">· plan ${esc(plan)} · ${rows.length} entr${rows.length === 1 ? "y" : "ies"}</span></h2>
-      <div class="wrap"></div><div class="charts"></div>`;
-    boards.append(sec);
-    table(rows, sec.querySelector(".wrap"));
-    charts(rows, reps.filter(r => r.size === size && r.plan === plan), sec.querySelector(".charts"));
-  });
-  if (!entries.length) boards.innerHTML = "<p>no results yet</p>";
+  const render = () => {
+    const size = pick.value, rows = entries.filter(e => !size || e.size === size);
+    const groups = {};
+    rows.forEach(e => (groups[e.plan] ??= []).push(e));
+    boards.innerHTML = rows.length ? "" : "<p>no results yet</p>";
+    Object.entries(groups).sort().forEach(([plan, rs]) => {
+      const sec = document.createElement("section");
+      sec.innerHTML = `<h2>plan ${esc(plan)} <span class="dim">· ${size ? esc(size) + " cells" : "all sizes"} · ${rs.length} result${rs.length === 1 ? "" : "s"}</span></h2>
+        <div class="wrap"></div><div class="charts"></div>`;
+      boards.append(sec);
+      table(rs, sec.querySelector(".wrap"));
+      charts(rs, reps.filter(r => r.plan === plan && (!size || r.size === size)), sec.querySelector(".charts"));
+    });
+  };
+  pick.onchange = render;
+  render();
   document.getElementById("foot").textContent = `generated ${generated} from ${entries.length} scored versions · data: scoreboard.json`;
 }).catch(e => { document.getElementById("boards").innerHTML = `<p>could not load scoreboard.json: ${esc(e)}</p>`; });
 </script>

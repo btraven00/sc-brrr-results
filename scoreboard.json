@@ -1,11 +1,14 @@
 {
- "generated": "2026-10-09T13:55:35+0200",
+ "generated": "2026-10-09T14:05:10+0200",
  "entries": [
   {
    "entry": "btraven00/exact-ref",
    "version": "0.1.0",
    "commit": "76bf3c5",
    "label": "Example: exact reference as an entry",
+   "tool": null,
+   "runtime": null,
+   "device": "cpu",
    "size": "10k",
    "plan": "5cbfa68d",
    "status": "ok",
@@ -13,12 +16,12 @@
    "walltime_mean": 2.024,
    "walltime_sd": 0.046,
    "n": 11,
-   "warmup_cluster": 0.197,
-   "warmup_pca": 0.801,
-   "pca": 1.676,
    "cluster": 0.18,
-   "knn": 0.163,
    "warmup_knn": 3.67,
+   "warmup_cluster": 0.197,
+   "pca": 1.676,
+   "warmup_pca": 0.801,
+   "knn": 0.163,
    "warmup": 4.67,
    "peak_ram_mb": 556.2,
    "rss_peak_mb": 561.2,
@@ -27,7 +30,42 @@
    "packages": 150.0,
    "contract_failed": 0,
    "n_clusters": 20.0,
-   "path": "btraven00/exact-ref/0.1.0/5cbfa68d/10k"
+   "path": "btraven00/exact-ref/0.1.0/5cbfa68d/10k",
+   "submitted": null,
+   "scored": "2026-10-09T13:52:54+0200"
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "commit": "76bf3c5",
+   "label": "Example: exact reference as an entry",
+   "tool": "scanpy",
+   "runtime": "python",
+   "device": "cpu",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "status": "ok",
+   "walltime": 2.044,
+   "walltime_mean": 2.028,
+   "walltime_sd": 0.088,
+   "n": 11,
+   "knn": 0.172,
+   "warmup_pca": 0.823,
+   "cluster": 0.186,
+   "pca": 1.684,
+   "warmup_cluster": 0.197,
+   "warmup_knn": 3.686,
+   "warmup": 4.71,
+   "peak_ram_mb": 597.5,
+   "rss_peak_mb": 558.8,
+   "growth_mb": 0.9,
+   "env_mb": 1122.5,
+   "packages": 150.0,
+   "contract_failed": 0,
+   "n_clusters": 20.0,
+   "path": "btraven00/exact-ref/0.1.1/5cbfa68d/10k",
+   "submitted": null,
+   "scored": "2026-10-09T14:03:42+0200"
   }
  ],
  "reps": [
@@ -470,6 +508,446 @@
    "seed": 5,
    "step": "total",
    "value": 2.064
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 0,
+   "seed": 0,
+   "step": "pca",
+   "value": 1.684
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 0,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.184
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 0,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.172
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 0,
+   "seed": 0,
+   "step": "total",
+   "value": 2.04
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 1,
+   "seed": 0,
+   "step": "pca",
+   "value": 1.63
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 1,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.166
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 1,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.186
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 1,
+   "seed": 0,
+   "step": "total",
+   "value": 1.982
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 2,
+   "seed": 0,
+   "step": "pca",
+   "value": 1.71
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 2,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.156
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 2,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.181
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 2,
+   "seed": 0,
+   "step": "total",
+   "value": 2.047
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 3,
+   "seed": 0,
+   "step": "pca",
+   "value": 1.743
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 3,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.181
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 3,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.243
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 3,
+   "seed": 0,
+   "step": "total",
+   "value": 2.168
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 4,
+   "seed": 0,
+   "step": "pca",
+   "value": 1.628
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 4,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.169
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 4,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.195
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 4,
+   "seed": 0,
+   "step": "total",
+   "value": 1.992
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 5,
+   "seed": 0,
+   "step": "pca",
+   "value": 1.698
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 5,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.172
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 5,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.173
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 5,
+   "seed": 0,
+   "step": "total",
+   "value": 2.044
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 0,
+   "seed": 1,
+   "step": "pca",
+   "value": 1.55
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 0,
+   "seed": 1,
+   "step": "knn",
+   "value": 0.173
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 0,
+   "seed": 1,
+   "step": "cluster",
+   "value": 0.162
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 0,
+   "seed": 1,
+   "step": "total",
+   "value": 1.885
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 1,
+   "seed": 2,
+   "step": "pca",
+   "value": 1.563
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 1,
+   "seed": 2,
+   "step": "knn",
+   "value": 0.153
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 1,
+   "seed": 2,
+   "step": "cluster",
+   "value": 0.172
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 1,
+   "seed": 2,
+   "step": "total",
+   "value": 1.889
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 2,
+   "seed": 3,
+   "step": "pca",
+   "value": 1.663
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 2,
+   "seed": 3,
+   "step": "knn",
+   "value": 0.192
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 2,
+   "seed": 3,
+   "step": "cluster",
+   "value": 0.201
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 2,
+   "seed": 3,
+   "step": "total",
+   "value": 2.057
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 3,
+   "seed": 4,
+   "step": "pca",
+   "value": 1.734
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 3,
+   "seed": 4,
+   "step": "knn",
+   "value": 0.193
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 3,
+   "seed": 4,
+   "step": "cluster",
+   "value": 0.208
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 3,
+   "seed": 4,
+   "step": "total",
+   "value": 2.136
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 4,
+   "seed": 5,
+   "step": "pca",
+   "value": 1.689
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 4,
+   "seed": 5,
+   "step": "knn",
+   "value": 0.172
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 4,
+   "seed": 5,
+   "step": "cluster",
+   "value": 0.211
+  },
+  {
+   "entry": "btraven00/exact-ref",
+   "version": "0.1.1",
+   "size": "10k",
+   "plan": "5cbfa68d",
+   "rep": 4,
+   "seed": 5,
+   "step": "total",
+   "value": 2.072
   }
  ]
 }
