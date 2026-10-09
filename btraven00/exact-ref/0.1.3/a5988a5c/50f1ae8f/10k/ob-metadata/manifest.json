@@ -1,0 +1,26 @@
+{
+  "run_id": "d3148092-b01a-436a-84dc-f0eb4be2e0a5",
+  "ob_version": "0.7.0.post6+g4e3e526f3",
+  "timestamp": "2026-10-09T12:37:50.586317+00:00",
+  "hostname": "5df74aa9f65c",
+  "platform": "linux",
+  "os": "Linux 7.1.5-76070105-generic #202607241434~1787955023~24.04~38a419f SMP PREEMPT_DYNAMIC Fri A",
+  "kernel": "7.1.5-76070105-generic",
+  "cpu_count": 16,
+  "cpu_model": "AMD Ryzen 9 PRO 7940HS w/ Radeon 780M Graphics",
+  "memory_total_mb": 62916,
+  "python_version": "3.13.16",
+  "python_executable": "/opt/conda/envs/ob/bin/python3.13",
+  "gpu_devices": null,
+  "snakemake_cmd": [
+    "/opt/conda/envs/ob/bin/snakemake",
+    "--snakefile",
+    "Snakefile",
+    "--cores",
+    "8",
+    "--use-conda",
+    "--conda-create-envs-only",
+    "--conda-prefix",
+    "/conda"
+  ]
+}
