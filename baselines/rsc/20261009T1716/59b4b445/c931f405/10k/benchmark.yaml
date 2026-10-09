@@ -1,0 +1,187 @@
+id: sc_brrr
+name: sc-brrr
+description: Computational trade-offs of GPU-accelerated single-cell pipelines (omni-scrna
+  slice)
+benchmarker: btraven <ben.uzh@proton.me>
+version: 0.0.1
+api_version: 0.7.0
+software_backend: conda
+software_environments:
+  huggingface:
+    conda: envs/omni-huggingface.yml
+  scanpy:
+    conda: envs/scanpy.linux-64.lock.yml
+  rapids:
+    conda: envs/rapids.linux-64.lock.yml
+stages:
+- id: data
+  provides:
+  - size
+  outputs:
+  - id: data_h5ad
+    path: '{name}.h5ad'
+  modules:
+  - id: hao2021_10k
+    provides:
+      size: 10k
+    software_environment: huggingface
+    repository: &id001
+      url: https://github.com/omnibenchmark/omni-huggingface
+      commit: dd042df5956fff3a022dde98a0fffa3e5517c503
+    parameters:
+    - repo: btraven/sc-brrr-hao2021
+      repo_type: dataset
+      revision: a61cd45f32445b9a84b6e003d64e463712fbf5af
+      files: hao2021_10k.h5ad
+      sha256: 4f4d6f7b1dcc580ff68f18a99c0fd2a8413d610fae5974f85c3099633b9af03c
+  - id: hao2021_50k
+    provides:
+      size: 50k
+    software_environment: huggingface
+    repository: *id001
+    parameters:
+    - repo: btraven/sc-brrr-hao2021
+      repo_type: dataset
+      revision: a61cd45f32445b9a84b6e003d64e463712fbf5af
+      files: hao2021_50k.h5ad
+      sha256: 0e157b6e1fd185990e7c674b8c68515511ad2d80b4bd43ebc5e5429b53140228
+  - id: hao2021_100k
+    provides:
+      size: 100k
+    software_environment: huggingface
+    repository: *id001
+    parameters:
+    - repo: btraven/sc-brrr-hao2021
+      repo_type: dataset
+      revision: a61cd45f32445b9a84b6e003d64e463712fbf5af
+      files: hao2021_100k.h5ad
+      sha256: a8cbaaeef5651f699e11dd3719681488b3470b3bd8d8209070bf5cad466f81ad
+- id: pipeline
+  inputs:
+  - data_h5ad
+  outputs:
+  - id: embedding_tsv
+    path: '{name}_embedding.tsv'
+  - id: neighbors_h5
+    path: '{name}_neighbors.h5'
+  - id: clusters_tsv
+    path: '{name}_clusters.tsv'
+  resources:
+    cores: 8
+    mem_mb: 6144
+    runtime: 5
+  modules:
+  - id: reference
+    name: 'Reference: scanpy PCA (arpack) -> exact kNN (sklearn brute force) -> Leiden
+      (igraph)'
+    software_environment: scanpy
+    resources:
+      cores: 8
+      mem_mb: 6144
+      runtime: 20
+    repository:
+      url: https://github.com/btraven00/sc-brrr
+      commit: 90cb1ad
+      entrypoint: reference
+    parameters:
+    - random_seed: 0
+      n_components: 50
+      n_neighbors: 15
+      resolution: 1.0
+      replicate: 0
+  - id: scanpy
+    name: 'CPU baseline: omni-scrna/scanpy (+ shared-io), PCA (arpack) -> kNN (pynndescent)
+      -> Leiden (igraph), fused'
+    software_environment: scanpy
+    resources: &id002
+      cores: 8
+      mem_mb: 6144
+      runtime: 20
+    repository: &id003
+      url: https://github.com/btraven00/sc-brrr
+      commit: 90cb1ad
+      entrypoint: fuse
+    parameters:
+    - module: https://github.com/btraven00/scanpy@97d8498dd1869388f47b29ca5eb110a8ae2f8703
+      stages: pca=pca.py,knn=knn.py,cluster=cluster.py
+      warmup_cells: 10000000
+      pca_solver: arpack
+      pca_n_components: 50
+      pca_dtype: float64
+      knn_n_neighbors: 15
+      knn_flavor: umap
+      cluster_resolution: 1.0
+      cluster_flavor: igraph
+      random_seed: 0
+      replicates: 6
+      seed_stride: 0
+    - module: https://github.com/btraven00/scanpy@97d8498dd1869388f47b29ca5eb110a8ae2f8703
+      stages: pca=pca.py,knn=knn.py,cluster=cluster.py
+      warmup_cells: 10000000
+      pca_solver: arpack
+      pca_n_components: 50
+      pca_dtype: float64
+      knn_n_neighbors: 15
+      knn_flavor: umap
+      cluster_resolution: 1.0
+      cluster_flavor: igraph
+      random_seed: 1
+      replicates: 5
+      seed_stride: 1
+  - id: rsc
+    name: 'GPU baseline: omni-scrna/rapids-singlecell, PCA (covariance eigh) -> kNN
+      (cuVS brute) -> Leiden, fused'
+    software_environment: rapids
+    requires_capabilities:
+    - cuda
+    resources: *id002
+    repository: *id003
+    parameters:
+    - module: https://github.com/omni-scrna/rapids-singlecell@29b6614ca06b7aefb2d475377b5600f9dcd6fd64
+      stages: pca=pca.py,knn=knn.py,cluster=cluster_graph.py
+      warmup_cells: 10000000
+      pca_solver: covariance-eigh
+      pca_n_components: 50
+      pca_dtype: float64
+      knn_n_neighbors: 15
+      knn_flavor: rapids
+      cluster_method: rapids-leiden
+      cluster_resolution: 1.0
+      random_seed: 0
+      replicates: 6
+      seed_stride: 0
+    - module: https://github.com/omni-scrna/rapids-singlecell@29b6614ca06b7aefb2d475377b5600f9dcd6fd64
+      stages: pca=pca.py,knn=knn.py,cluster=cluster_graph.py
+      warmup_cells: 10000000
+      pca_solver: covariance-eigh
+      pca_n_components: 50
+      pca_dtype: float64
+      knn_n_neighbors: 15
+      knn_flavor: rapids
+      cluster_method: rapids-leiden
+      cluster_resolution: 1.0
+      random_seed: 1
+      replicates: 5
+      seed_stride: 1
+- id: metrics
+  gather:
+  - from: clusters_tsv
+    group_by: data
+  outputs:
+  - id: metrics_jsonl
+    path: '{name}_metrics.jsonl'
+  modules:
+  - id: n_clusters
+    name: Cluster count per run (no reference needed)
+    software_environment: scanpy
+    repository:
+      url: https://github.com/btraven00/sc-brrr
+      commit: 90cb1ad
+      entrypoint: n-clusters
+  - id: contract
+    name: Every output of every replicate against specs/types.yaml
+    software_environment: scanpy
+    repository:
+      url: https://github.com/btraven00/sc-brrr
+      commit: 90cb1ad
+      entrypoint: contract

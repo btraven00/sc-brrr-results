@@ -1,0 +1,38 @@
+name: 'GPU baseline: omni-scrna/rapids-singlecell, PCA (covariance eigh) -> kNN (cuVS
+  brute) -> Leiden, fused'
+tool: rapids-singlecell
+runtime: python
+baseline: true
+repository:
+  url: https://github.com/btraven00/sc-brrr
+  commit: 90cb1ad
+  entrypoint: fuse
+requires_capabilities:
+- cuda
+parameters:
+- module: https://github.com/omni-scrna/rapids-singlecell@29b6614ca06b7aefb2d475377b5600f9dcd6fd64
+  stages: pca=pca.py,knn=knn.py,cluster=cluster_graph.py
+  warmup_cells: 10000000
+  pca_solver: covariance-eigh
+  pca_n_components: 50
+  pca_dtype: float64
+  knn_n_neighbors: 15
+  knn_flavor: rapids
+  cluster_method: rapids-leiden
+  cluster_resolution: 1.0
+  random_seed: 0
+  replicates: 6
+  seed_stride: 0
+- module: https://github.com/omni-scrna/rapids-singlecell@29b6614ca06b7aefb2d475377b5600f9dcd6fd64
+  stages: pca=pca.py,knn=knn.py,cluster=cluster_graph.py
+  warmup_cells: 10000000
+  pca_solver: covariance-eigh
+  pca_n_components: 50
+  pca_dtype: float64
+  knn_n_neighbors: 15
+  knn_flavor: rapids
+  cluster_method: rapids-leiden
+  cluster_resolution: 1.0
+  random_seed: 1
+  replicates: 5
+  seed_stride: 1
