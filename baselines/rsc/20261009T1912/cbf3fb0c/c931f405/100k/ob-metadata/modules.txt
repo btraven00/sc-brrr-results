@@ -1,0 +1,36 @@
+# Modules used in this benchmark
+# Generated: 2026-10-09 17:12:29.379951
+#
+# Format: stage/module - repository@commit
+#
+
+data/hao2021_100k:
+  Repository: https://github.com/omnibenchmark/omni-huggingface
+  Commit: dd042df5956fff3a022dde98a0fffa3e5517c503
+  Module dir: .modules/omni-huggingface/dd042df
+  Entrypoint: run.py
+
+pipeline/reference:
+  Repository: /bench
+  Commit: 6885e941ce7203d12e4719427346ed002360dcb6
+  Module dir: .modules/bench/6885e94
+  Entrypoint: baselines/reference.sh
+
+pipeline/rsc:
+  Repository: /bench
+  Commit: 6885e941ce7203d12e4719427346ed002360dcb6
+  Module dir: .modules/bench/6885e94
+  Entrypoint: brrr/fuse.sh
+
+metrics/n_clusters:
+  Repository: /bench
+  Commit: 6885e941ce7203d12e4719427346ed002360dcb6
+  Module dir: .modules/bench/6885e94
+  Entrypoint: metrics/clusters.py
+
+metrics/contract:
+  Repository: /bench
+  Commit: 6885e941ce7203d12e4719427346ed002360dcb6
+  Module dir: .modules/bench/6885e94
+  Entrypoint: metrics/contract.py
+
