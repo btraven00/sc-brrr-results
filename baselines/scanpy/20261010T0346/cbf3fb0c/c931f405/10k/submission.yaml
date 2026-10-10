@@ -1,0 +1,37 @@
+name: 'CPU baseline: omni-scrna/scanpy (+ shared-io), PCA (arpack) -> kNN (pynndescent)
+  -> Leiden (igraph), fused'
+tool: scanpy
+runtime: python
+baseline: true
+repository:
+  url: https://github.com/btraven00/sc-brrr
+  commit: 5203cce
+  entrypoint: fuse
+requires_capabilities: []
+parameters:
+- module: https://github.com/btraven00/scanpy@97d8498dd1869388f47b29ca5eb110a8ae2f8703
+  stages: pca=pca.py,knn=knn.py,cluster=cluster.py
+  warmup_cells: 10000000
+  pca_solver: arpack
+  pca_n_components: 50
+  pca_dtype: float64
+  knn_n_neighbors: 15
+  knn_flavor: umap
+  cluster_resolution: 1.0
+  cluster_flavor: igraph
+  random_seed: 0
+  replicates: 6
+  seed_stride: 0
+- module: https://github.com/btraven00/scanpy@97d8498dd1869388f47b29ca5eb110a8ae2f8703
+  stages: pca=pca.py,knn=knn.py,cluster=cluster.py
+  warmup_cells: 10000000
+  pca_solver: arpack
+  pca_n_components: 50
+  pca_dtype: float64
+  knn_n_neighbors: 15
+  knn_flavor: umap
+  cluster_resolution: 1.0
+  cluster_flavor: igraph
+  random_seed: 1
+  replicates: 5
+  seed_stride: 1
