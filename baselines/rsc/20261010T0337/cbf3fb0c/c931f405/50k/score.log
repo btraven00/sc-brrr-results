@@ -1,0 +1,39 @@
+hao2021_50k.h5ad: in the cache, sha256 ok
+setup (network on) ...
+data_hao2021_50k_0ddcfd80 (2 cores, 6144 MB, 30 min) ... ok
+data_hao2021_50k_0ddcfd80_pipeline_reference_31d5c367 (8 cores, 6144 MB, 20 min) ... ok
+data_hao2021_50k_0ddcfd80_pipeline_rsc_a45acb67 (8 cores, 6144 MB, 20 min) ... ok
+data_hao2021_50k_0ddcfd80_pipeline_rsc_d4e5533d (8 cores, 6144 MB, 20 min) ... ok
+metrics_n_clusters_hao2021_50k_default (2 cores, 6144 MB, 30 min) ... ok
+metrics_contract_hao2021_50k_default (2 cores, 6144 MB, 30 min) ... ok
+
+job                                          end                 wall     mem peak / cap    denet  growth/rep      env
+data_hao2021_50k_0ddcfd80                    ok                  3.5s      719 / 6144   MB      0MB           -    220MB
+pipeline_reference_31d5c367                  ok                 42.2s      921 / 6144   MB    924MB           -    1.1GB
+pipeline_rsc_a45acb67                        ok                 72.3s     2776 / 6144   MB   2576MB     -0.0 MB    5.9GB
+pipeline_rsc_d4e5533d                        ok                 75.3s     2694 / 6144   MB   2579MB     +0.1 MB    5.9GB
+metrics_n_clusters_hao2021_50k_default       ok                  2.9s      124 / 6144   MB      0MB           -    1.1GB
+metrics_contract_hao2021_50k_default         ok                  8.9s      229 / 6144   MB      0MB           -    1.1GB
+WARNING data_hao2021_50k_0ddcfd80_pipeline_rsc_d4e5533d: memory grows 0.1 ± 0.0 MB per replicate; cap (6144 MB) in ~40061 more
+6/6 jobs ok -> <repo>/runs/baselines-rsc-20261010T0337-50k-20261010T033721/results
+shape: (35, 4)
+┌────────────────────────┬─────────────┬─────┬────────┐
+│ metric                 ┆ method      ┆ n   ┆ median │
+│ ---                    ┆ ---         ┆ --- ┆ ---    │
+│ str                    ┆ str         ┆ u32 ┆ f64    │
+╞════════════════════════╪═════════════╪═════╪════════╡
+│ contract_ok            ┆ reference   ┆ 6   ┆ 1.0    │
+│ contract_ok            ┆ rsc         ┆ 39  ┆ 1.0    │
+│ cpu_s                  ┆ null        ┆ 2   ┆ 5.5    │
+│ cpu_s                  ┆ hao2021_50k ┆ 1   ┆ 2.7    │
+│ cpu_s                  ┆ reference   ┆ 1   ┆ 47.5   │
+│ …                      ┆ …           ┆ …   ┆ …      │
+│ vram_peak_mb           ┆ rsc         ┆ 2   ┆ 1216.9 │
+│ walltime_s             ┆ reference   ┆ 1   ┆ 24.042 │
+│ walltime_s             ┆ rsc         ┆ 11  ┆ 6.935  │
+│ warmup_step_walltime_s ┆ rsc         ┆ 6   ┆ 6.92   │
+│ warmup_walltime_s      ┆ rsc         ┆ 2   ┆ 23.324 │
+└────────────────────────┴─────────────┴─────┴────────┘
+155 records -> <repo>/runs/baselines-rsc-20261010T0337-50k-20261010T033721/results/metrics.parquet
+baselines/rsc 20261010T0337 (5203cce) plan cbf3fb0c host c931f405 50k: ok (run baselines-rsc-20261010T0337-50k-20261010T033721)
+OUTCOME {"outcome": "ok", "reason": "baselines/rsc 20261010T0337 (5203cce) plan cbf3fb0c host c931f405 50k: ok (run baselines-rsc-20261010T0337-50k-20261010T033721)", "result": "baselines/rsc/20261010T0337/cbf3fb0c/c931f405/50k", "plan": "cbf3fb0c", "host": "c931f405", "run": "baselines-rsc-20261010T0337-50k-20261010T033721", "log": "<repo>/runs/baselines-rsc-20261010T0337-50k-20261010T033721/runner.log"}
