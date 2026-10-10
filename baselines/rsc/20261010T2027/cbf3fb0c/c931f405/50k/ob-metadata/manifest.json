@@ -1,0 +1,26 @@
+{
+  "run_id": "1b6cbd59-8536-49f2-abc1-9ee3f227b0be",
+  "ob_version": "0.7.0.post6+g4e3e526f3",
+  "timestamp": "2026-10-10T18:27:23.581618+00:00",
+  "hostname": "3e3a3760d2dd",
+  "platform": "linux",
+  "os": "Linux 6.8.0-111-generic #111-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 11 23:16:02 UTC 2026",
+  "kernel": "6.8.0-111-generic",
+  "cpu_count": 128,
+  "cpu_model": "AMD EPYC 7763 64-Core Processor",
+  "memory_total_mb": 515739,
+  "python_version": "3.13.16",
+  "python_executable": "/opt/conda/envs/ob/bin/python3.13",
+  "gpu_devices": null,
+  "snakemake_cmd": [
+    "/opt/conda/envs/ob/bin/snakemake",
+    "--snakefile",
+    "Snakefile",
+    "--cores",
+    "8",
+    "--use-conda",
+    "--conda-create-envs-only",
+    "--conda-prefix",
+    "/conda"
+  ]
+}
