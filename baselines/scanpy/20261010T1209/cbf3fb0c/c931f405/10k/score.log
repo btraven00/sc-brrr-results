@@ -1,0 +1,40 @@
+hao2021_10k.h5ad: in the cache, sha256 ok
+setup (network on) ...
+data_hao2021_10k_68c8db81 (2 cores, 6144 MB, 30 min) ... ok
+data_hao2021_10k_68c8db81_pipeline_reference_31d5c367 (8 cores, 6144 MB, 20 min) ... ok
+data_hao2021_10k_68c8db81_pipeline_scanpy_fbb37862 (8 cores, 6144 MB, 20 min) ... ok
+data_hao2021_10k_68c8db81_pipeline_scanpy_f7e456ae (8 cores, 6144 MB, 20 min) ... ok
+metrics_n_clusters_hao2021_10k_default (2 cores, 6144 MB, 30 min) ... ok
+metrics_contract_hao2021_10k_default (2 cores, 6144 MB, 30 min) ... ok
+
+job                                          end                 wall     mem peak / cap    denet  growth/rep      env
+data_hao2021_10k_68c8db81                    ok                  2.7s      718 / 6144   MB      0MB           -    220MB
+pipeline_reference_31d5c367                  ok                 15.2s      528 / 6144   MB    562MB           -    1.1GB
+pipeline_scanpy_fbb37862                     ok                 49.3s      935 / 6144   MB    876MB    +11.1 MB    1.1GB
+pipeline_scanpy_f7e456ae                     ok                 43.9s      889 / 6144   MB    846MB    +12.4 MB    1.1GB
+metrics_n_clusters_hao2021_10k_default       ok                  2.7s      124 / 6144   MB      0MB           -    1.1GB
+metrics_contract_hao2021_10k_default         ok                  3.9s      170 / 6144   MB      0MB           -    1.1GB
+WARNING data_hao2021_10k_68c8db81_pipeline_scanpy_fbb37862: memory grows 11.1 ± 1.5 MB per replicate; cap (6144 MB) in ~480 more
+WARNING data_hao2021_10k_68c8db81_pipeline_scanpy_f7e456ae: memory grows 12.4 ± 0.7 MB per replicate; cap (6144 MB) in ~435 more
+6/6 jobs ok -> <repo>/runs/baselines-scanpy-20261010T1209-10k-20261010T120935/results
+shape: (34, 4)
+┌────────────────────────┬─────────────┬─────┬─────────┐
+│ metric                 ┆ method      ┆ n   ┆ median  │
+│ ---                    ┆ ---         ┆ --- ┆ ---     │
+│ str                    ┆ str         ┆ u32 ┆ f64     │
+╞════════════════════════╪═════════════╪═════╪═════════╡
+│ contract_ok            ┆ reference   ┆ 6   ┆ 1.0     │
+│ contract_ok            ┆ scanpy      ┆ 39  ┆ 1.0     │
+│ cpu_s                  ┆ null        ┆ 2   ┆ 2.9     │
+│ cpu_s                  ┆ hao2021_10k ┆ 1   ┆ 2.5     │
+│ cpu_s                  ┆ reference   ┆ 1   ┆ 18.2    │
+│ …                      ┆ …           ┆ …   ┆ …       │
+│ time_to_result_s       ┆ scanpy      ┆ 2   ┆ 25.015  │
+│ walltime_s             ┆ reference   ┆ 1   ┆ 10.581  │
+│ walltime_s             ┆ scanpy      ┆ 11  ┆ 3.586   │
+│ warmup_step_walltime_s ┆ scanpy      ┆ 6   ┆ 2.8155  │
+│ warmup_walltime_s      ┆ scanpy      ┆ 2   ┆ 22.5005 │
+└────────────────────────┴─────────────┴─────┴─────────┘
+153 records -> <repo>/runs/baselines-scanpy-20261010T1209-10k-20261010T120935/results/metrics.parquet
+baselines/scanpy 20261010T1209 (5203cce) plan cbf3fb0c host c931f405 10k: ok (run baselines-scanpy-20261010T1209-10k-20261010T120935)
+OUTCOME {"outcome": "ok", "reason": "baselines/scanpy 20261010T1209 (5203cce) plan cbf3fb0c host c931f405 10k: ok (run baselines-scanpy-20261010T1209-10k-20261010T120935)", "result": "baselines/scanpy/20261010T1209/cbf3fb0c/c931f405/10k", "plan": "cbf3fb0c", "host": "c931f405", "run": "baselines-scanpy-20261010T1209-10k-20261010T120935", "log": "<repo>/runs/baselines-scanpy-20261010T1209-10k-20261010T120935/runner.log"}
