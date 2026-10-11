@@ -1,0 +1,367 @@
+{
+ "id": "baselines-rsc-20261011T1312-50k-20261011T131207",
+ "started": "2026-10-11T13:12:08+0200",
+ "repo_commit": "6885e941ce7203d12e4719427346ed002360dcb6",
+ "repo_dirty": false,
+ "plan": "runs/.score/baselines-rsc-20261011T1312-50k-20261011T131207.yaml",
+ "plan_sha256": "76d857ac51f78d5d35a81dc959ab2227bd59c316034ede61d90770f8fd5cde7e",
+ "filter": {
+  "picks": {
+   "data": {
+    "hao2021_50k": "all"
+   },
+   "pipeline": {
+    "reference": "all",
+    "rsc": "all"
+   },
+   "metrics": {
+    "n_clusters": "all",
+    "contract": "all"
+   }
+  }
+ },
+ "limits": {
+  "image": "localhost/sc-brrr-base:ob-4e3e526",
+  "default_mem_mb": 6144,
+  "default_runtime": 30,
+  "term_grace_s": 10,
+  "conda_cache": "runs/.conda",
+  "data_cache": "runs/.hf",
+  "cpuset_cpus": null,
+  "cpuset_mems": null,
+  "capabilities": {
+   "cuda": [
+    "--device",
+    "nvidia.com/gpu=all"
+   ]
+  }
+ },
+ "image": "localhost/sc-brrr-base:ob-4e3e526",
+ "image_id": "43430ba9b4ba26d7f851d07cfef189d2ebdcee03416adeb6a8ee2f4f6dc24db7",
+ "ob_version": "OmniBenchmark CLI, version 0.7.0.post6+g4e3e526f3",
+ "data": {
+  "btraven/sc-brrr-hao2021@a61cd45/hao2021_50k.h5ad": "0e157b6e1fd185990e7c674b8c68515511ad2d80b4bd43ebc5e5429b53140228"
+ },
+ "host": {
+  "id": "c931f405",
+  "cpu_model": "AMD EPYC 7763 64-Core Processor",
+  "kernel": "6.8.0-111-generic",
+  "cpu_count": 128,
+  "memory_total_mb": 515739,
+  "gpus": [
+   {
+    "name": "NVIDIA L4",
+    "driver": "595.84",
+    "memory": "23034 MiB"
+   }
+  ]
+ },
+ "jobs": [
+  {
+   "rule": "data_hao2021_50k_0ddcfd80",
+   "cores": 2,
+   "mem_mb": 6144,
+   "runtime_min": 30,
+   "capabilities": [],
+   "env": ".envs/huggingface.yaml",
+   "exit": 0,
+   "oom_killed": false,
+   "timed_out": false,
+   "sigterm": false,
+   "wall_s": 2.7,
+   "started": 1791717132.744,
+   "cgroup": {
+    "mem_peak_mb": 717.7,
+    "cpu_s": 2.5
+   },
+   "warnings": []
+  },
+  {
+   "rule": "data_hao2021_50k_0ddcfd80_pipeline_reference_31d5c367",
+   "cores": 8,
+   "mem_mb": 6144,
+   "runtime_min": 20,
+   "capabilities": [],
+   "env": ".envs/scanpy.yaml",
+   "exit": 0,
+   "oom_killed": false,
+   "timed_out": false,
+   "sigterm": false,
+   "wall_s": 27.7,
+   "started": 1791717135.772,
+   "cgroup": {
+    "mem_peak_mb": 899.6,
+    "cpu_s": 41.7
+   },
+   "denet": {
+    "rss_peak_mb": 924.9,
+    "cpu_s": 39.1,
+    "threads_peak": 23,
+    "samples": 51,
+    "vram_peak_mb": null
+   },
+   "module": {
+    "exit": {
+     "replicate": 0,
+     "done": 1,
+     "reason": "ok"
+    },
+    "replicate_rss_mb": [
+     767.5
+    ]
+   },
+   "warnings": []
+  },
+  {
+   "rule": "data_hao2021_50k_0ddcfd80_pipeline_rsc_a45acb67",
+   "cores": 8,
+   "mem_mb": 6144,
+   "runtime_min": 20,
+   "capabilities": [
+    "cuda"
+   ],
+   "env": ".envs/rapids.yaml",
+   "exit": 0,
+   "oom_killed": false,
+   "timed_out": false,
+   "sigterm": false,
+   "wall_s": 32.5,
+   "started": 1791717163.679,
+   "cgroup": {
+    "mem_peak_mb": 2814.9,
+    "cpu_s": 36.1
+   },
+   "denet": {
+    "rss_peak_mb": 2432.2,
+    "cpu_s": 31.8,
+    "threads_peak": 40,
+    "samples": 53,
+    "vram_peak_mb": 1216.9
+   },
+   "module": {
+    "exit": {
+     "replicate": 5,
+     "done": 6,
+     "reason": "ok"
+    },
+    "replicate_rss_mb": [
+     2137.1,
+     2137.5,
+     2137.5,
+     2137.6,
+     2153.6,
+     2137.7
+    ]
+   },
+   "creep": {
+    "mb_per_replicate": 0.0,
+    "sd": 13.0,
+    "n": 4
+   },
+   "warnings": []
+  },
+  {
+   "rule": "data_hao2021_50k_0ddcfd80_pipeline_rsc_d4e5533d",
+   "cores": 8,
+   "mem_mb": 6144,
+   "runtime_min": 20,
+   "capabilities": [
+    "cuda"
+   ],
+   "env": ".envs/rapids.yaml",
+   "exit": 0,
+   "oom_killed": false,
+   "timed_out": false,
+   "sigterm": false,
+   "wall_s": 33.9,
+   "started": 1791717196.395,
+   "cgroup": {
+    "mem_peak_mb": 2744.6,
+    "cpu_s": 37.3
+   },
+   "denet": {
+    "rss_peak_mb": 2563.0,
+    "cpu_s": 32.9,
+    "threads_peak": 40,
+    "samples": 54,
+    "vram_peak_mb": 1026.9
+   },
+   "module": {
+    "exit": {
+     "replicate": 4,
+     "done": 5,
+     "reason": "ok"
+    },
+    "replicate_rss_mb": [
+     2137.2,
+     2136.9,
+     2137.3,
+     2137.2,
+     2137.3
+    ]
+   },
+   "creep": {
+    "mb_per_replicate": 0.1,
+    "sd": 0.3,
+    "n": 3
+   },
+   "warnings": []
+  },
+  {
+   "rule": "metrics_n_clusters_hao2021_50k_default",
+   "cores": 2,
+   "mem_mb": 6144,
+   "runtime_min": 30,
+   "capabilities": [],
+   "env": ".envs/scanpy.yaml",
+   "exit": 0,
+   "oom_killed": false,
+   "timed_out": false,
+   "sigterm": false,
+   "wall_s": 2.9,
+   "started": 1791717230.643,
+   "cgroup": {
+    "mem_peak_mb": 123.3,
+    "cpu_s": 2.5
+   },
+   "warnings": []
+  },
+  {
+   "rule": "metrics_contract_hao2021_50k_default",
+   "cores": 2,
+   "mem_mb": 6144,
+   "runtime_min": 30,
+   "capabilities": [],
+   "env": ".envs/scanpy.yaml",
+   "exit": 0,
+   "oom_killed": false,
+   "timed_out": false,
+   "sigterm": false,
+   "wall_s": 9.0,
+   "started": 1791717233.612,
+   "cgroup": {
+    "mem_peak_mb": 225.1,
+    "cpu_s": 8.8
+   },
+   "warnings": []
+  }
+ ],
+ "setup_exit": 0,
+ "envs": {
+  ".envs/huggingface.yaml": {
+   "size_mb": 219.5,
+   "conda_packages": 46,
+   "pip_packages": 0,
+   "prefix": "f1b025325ead79ae0ee736552b9d078e_"
+  },
+  ".envs/rapids.yaml": {
+   "size_mb": 6007.7,
+   "conda_packages": 29,
+   "pip_packages": 137,
+   "prefix": "30dec3a91601ebb9e4b69017d98f9669_"
+  },
+  ".envs/scanpy.yaml": {
+   "size_mb": 1121.1,
+   "conda_packages": 149,
+   "pip_packages": 1,
+   "prefix": "613289a77143e229a42a609590d65392_"
+  }
+ },
+ "outputs": {
+  ".metadata/benchmark.yaml": "b3300a8c80814104df630986913ce40d1256f003af2cba0eca533fadee38a18b",
+  ".metadata/manifest.json": "ffef0ec870291c2a3d2b0b1ffc242c9ca98b4ffc25e290e84d75dcf81d5a9bb5",
+  ".metadata/modules.txt": "ee1cfe0db6f8fa543c3e9ca24ddf00bbffca9b4486a7bb8107f8862994b34443",
+  "Snakefile": "81852788c1f9ad1223cc45bf15d4aa876876f4bfa0223a110d9ff624bb933876",
+  "data/hao2021_50k/.0ddcfd80/hao2021_100k.h5ad": "a8cbaaeef5651f699e11dd3719681488b3470b3bd8d8209070bf5cad466f81ad",
+  "data/hao2021_50k/.0ddcfd80/hao2021_10k.h5ad": "4f4d6f7b1dcc580ff68f18a99c0fd2a8413d610fae5974f85c3099633b9af03c",
+  "data/hao2021_50k/.0ddcfd80/hao2021_50k.h5ad": "0e157b6e1fd185990e7c674b8c68515511ad2d80b4bd43ebc5e5429b53140228",
+  "data/hao2021_50k/.0ddcfd80/parameters.json": "b80cfac753ab39a77e5a63a1096c83f6bfd8af5840f80f3566dc1819493dbdc5",
+  "data/hao2021_50k/.0ddcfd80/performance.txt": "64676830d4a263905854bd7c603b4b703862ae2f94983995a117f1e4028ab109",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/denet.jsonl": "4e28631f62abf9ca27e5e581bb5b727606355a81b387bdadace7a8c978e10d4d",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/module.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/obkit-events.jsonl": "f0fdf5bebc857859aabfe268d1a942d76ab77237ec7d8fdb88c3336ea76513d8",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/parameters.json": "dbf31fdd68ff56e9869741414df0998f2d0831c385f41fd4d81d9036db02c246",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/performance.txt": "9180932ced4a9b8aeff901c47494752a4dca120cb1f30ae5f494765b61e0ebe3",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/reference_clusters.tsv": "1a7f71714379a59368057d6cad8455e43384753b088ef832b3b312be0c2bf20f",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/reference_embedding.tsv": "648fe033761ce1ee3b9bae43f85c5d862a3f14d0c702e26f442690b246ee526e",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/reference_neighbors.h5": "07686795023d7b91fd926f390157d81163643d4784a0c022866ea89d31f1c478",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/rep0/reference_clusters.tsv": "1a7f71714379a59368057d6cad8455e43384753b088ef832b3b312be0c2bf20f",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/rep0/reference_embedding.tsv": "648fe033761ce1ee3b9bae43f85c5d862a3f14d0c702e26f442690b246ee526e",
+  "data/hao2021_50k/.0ddcfd80/pipeline/reference/.31d5c367/rep0/reference_neighbors.h5": "07686795023d7b91fd926f390157d81163643d4784a0c022866ea89d31f1c478",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/.fuse/warmup/obkit-events.jsonl": "6006208f549cad23643e428cae67cc7a045c4cebaad4fef116318a52eddf8adf",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/.fuse/warmup/rsc_clusters.tsv": "96e5287316a22027a42072bc3bbe062fa266763ace1eacf282802c3fb97be5bc",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/.fuse/warmup/rsc_embedding.tsv": "846f44257ac672747f7d807e18428a36fe41db18042e87870406adb9c869bb37",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/.fuse/warmup/rsc_loadings.tsv": "05299286ccfaec8dc2689dc2ff633de4361f7146110893ce2cd5aac14d0fee54",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/.fuse/warmup/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/denet.jsonl": "2b5d9d63cc26089bac41a8bf1500fc60cff0db9fea96fcafc4503194e3bdbf0e",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/module.log": "c544f441effe5688679fdc8e7a5db69c5b7bf27cff1f6544e4c77840c7ff2232",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/obkit-events.jsonl": "bd31c672df8d56ee08a70a9234c6040c24df2e1196b80011c7ce30fcee154a5e",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/parameters.json": "d8bcae50bef888062ff6342942278e0ad532df11ac11f73db885c151a750b366",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/performance.txt": "ce411cf4cd275bf0288b8f5c1434542506c06ae386c9104ad0fa2e2d24c06aca",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep0/rsc_clusters.tsv": "c177b0e61c11c0ec86086f5d413714589963cba28cc3a42b800d3f52ab7f8d79",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep0/rsc_embedding.tsv": "e7a0201f242718ad4e493fd284657d94b16ddb6c0d9ac2807461aa4b5ce30a00",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep0/rsc_loadings.tsv": "8928a0aaa9c15270d607b8acbef1f927f17fe28fa0e34af701b3189b6f4a279d",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep0/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep1/rsc_clusters.tsv": "c177b0e61c11c0ec86086f5d413714589963cba28cc3a42b800d3f52ab7f8d79",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep1/rsc_embedding.tsv": "3256d8df2f4a653dea6f00f9bcb84f0631e59395ebae7465d1ef3a418b4a086e",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep1/rsc_loadings.tsv": "813230a7ca6d7b039dd92db396f5192969ad8ecc8fa91c9b0713e8853f250d70",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep1/rsc_neighbors.h5": "24ea8511e59471531d718e243ef06b81858c430ebcc0a334c91e93d936f6355a",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep2/rsc_clusters.tsv": "96e5287316a22027a42072bc3bbe062fa266763ace1eacf282802c3fb97be5bc",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep2/rsc_embedding.tsv": "ccf91d203fdec340d92fc897bfad2facfc46c7d3946e3acfd701c1353f097c36",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep2/rsc_loadings.tsv": "3d15f029f2ddf87ce6ee6825016c345f2815b00af1beff95475ce7e45e1b22da",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep2/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep3/rsc_clusters.tsv": "96e5287316a22027a42072bc3bbe062fa266763ace1eacf282802c3fb97be5bc",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep3/rsc_embedding.tsv": "0fbd0f15370be91678839b4150c0890bc20d1591ed731d75cd7ebb6e6fa69d49",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep3/rsc_loadings.tsv": "834a226d7c4c0f3cfe092bacc33503d8bda85563bdcf7492abebb6b3fabc8e84",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep3/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep4/rsc_clusters.tsv": "96e5287316a22027a42072bc3bbe062fa266763ace1eacf282802c3fb97be5bc",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep4/rsc_embedding.tsv": "cc504f1c0336d0164ee504961149463c01d6802faff3c47b353a0a9f3c19c390",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep4/rsc_loadings.tsv": "078eb27146bf772fc3bd1f2d774b9193f91cb1dc75299ca00995bf8d73aec1a9",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep4/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep5/rsc_clusters.tsv": "96e5287316a22027a42072bc3bbe062fa266763ace1eacf282802c3fb97be5bc",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep5/rsc_embedding.tsv": "09b913b6ad603d47768b1d81240293244b0b1aaab955c4fe11fbe62a682f16b2",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep5/rsc_loadings.tsv": "6abe8eb4d6bcf866a62714cfca53f7da8a372353ffe9eae15b7aebcc88eaf4b9",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rep5/rsc_neighbors.h5": "24ea8511e59471531d718e243ef06b81858c430ebcc0a334c91e93d936f6355a",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rsc_clusters.tsv": "c177b0e61c11c0ec86086f5d413714589963cba28cc3a42b800d3f52ab7f8d79",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rsc_embedding.tsv": "e7a0201f242718ad4e493fd284657d94b16ddb6c0d9ac2807461aa4b5ce30a00",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.a45acb67/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/.fuse/warmup/obkit-events.jsonl": "d4cdbd630c06762d6a473774c075cc36ec8d0eaf925daa8272c28a12b5a8777f",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/.fuse/warmup/rsc_clusters.tsv": "7779d611c236003ed428e4145df14ab9c637a44e20e2a06010db07640e22ca72",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/.fuse/warmup/rsc_embedding.tsv": "b6562dbfd4dd1ccd0c4282c2742e1db65ad84e9df7bc43d689de1523d24e40cf",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/.fuse/warmup/rsc_loadings.tsv": "51637ca1454de50825e7111cb5e93544f869362e92a4f56b025c123e90be2817",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/.fuse/warmup/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/denet.jsonl": "c3d3a146be4a268b70429058dfc5483008e10852607099e24d3af45e33e3ca3f",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/module.log": "fe4bdc4efa9ac86f2181d0c515594218f151996db15cc79842438d6f3cc5a12d",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/obkit-events.jsonl": "c10d3c1f425f9f23bfb1f90057571277382465b8bd9f6eb2a7423f07a6cde165",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/parameters.json": "9617f2c47f65f39fb5d50143cc0e422bc8b7febf25d953e5f91897a7f23399f1",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/performance.txt": "895a2e02a00805e07029b6bc46c171766c3e4e6e8852119bd4c65b505406687a",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep0/rsc_clusters.tsv": "7779d611c236003ed428e4145df14ab9c637a44e20e2a06010db07640e22ca72",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep0/rsc_embedding.tsv": "f9304fa75887250bc72742c8cc89727d9a7578a549eaa3ee226c1caf77b487f4",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep0/rsc_loadings.tsv": "5d9e4f8c9403a3f4f224a46af75bb4f162d67c2927be016825dcbe2a39a0950f",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep0/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep1/rsc_clusters.tsv": "ee8d1c6af7c986945447216fc34c95cab85d3a7404c22ec145f18b4ea785bb0f",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep1/rsc_embedding.tsv": "df2a4c91827bce3e8fb0f75bf241a26684c97edaef946ca712988cf01c24568f",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep1/rsc_loadings.tsv": "dac6564ce54cc75a794fbba31e3ec97cb54fa1f5ec0506ab5e126796369bc663",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep1/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep2/rsc_clusters.tsv": "85f101518da7efb8f8172ca0dd69f4a222be15e117c747de59e949f75beaaad9",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep2/rsc_embedding.tsv": "93ad359cb432fe64080feebd73c08aa32391e6fcba3e08182977c84b1f644256",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep2/rsc_loadings.tsv": "232ed3654dd853447beb13ebe23735d3acb7dba7d9f0bc82b6662d7d3a46b785",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep2/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep3/rsc_clusters.tsv": "ec984d325230b742b0f24be89d349575be6f35a7d82acafe652ca33789a2c714",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep3/rsc_embedding.tsv": "72fc592be9d9e175e9cd2cd44478aaebe7c1ce9073d7b256cee9e49838d6634a",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep3/rsc_loadings.tsv": "a245626d63f33bc9a5667ca0cda36dab06bbe319e005218b1f034790caca0692",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep3/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep4/rsc_clusters.tsv": "e5312257be506a268c4ec5358b5c72e2debc2ef93b51fc0f521233d7d3bcbfea",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep4/rsc_embedding.tsv": "e8223157bcfec8dd17b22232c7373b77a83c01d73111155a955b777c8136d68e",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep4/rsc_loadings.tsv": "c2f288772885fe16da76ffcef8797441bbcccf6d7607fab866b6508bab60a4f2",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rep4/rsc_neighbors.h5": "24ea8511e59471531d718e243ef06b81858c430ebcc0a334c91e93d936f6355a",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rsc_clusters.tsv": "7779d611c236003ed428e4145df14ab9c637a44e20e2a06010db07640e22ca72",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rsc_embedding.tsv": "f9304fa75887250bc72742c8cc89727d9a7578a549eaa3ee226c1caf77b487f4",
+  "data/hao2021_50k/.0ddcfd80/pipeline/rsc/.d4e5533d/rsc_neighbors.h5": "7cc0b9a164ef6671d26bfdb1ee227edd0544ea660c974cbdc9e018bccc016b91",
+  "metrics/hao2021_50k/contract/.default/contract_metrics.jsonl": "bf6ccabee42b619a7c55ecdb6dda0df68a2e6169cdd4c591e8900844abd28b3a",
+  "metrics/hao2021_50k/contract/.default/lineage.json": "ef2d0afa38baea7deb40a7a5aa24db49e97b5e3be5b0754970f1e5c7e88ed9fa",
+  "metrics/hao2021_50k/n_clusters/.default/lineage.json": "e839409941c86709794daab148292197d410b0471f83401010057ea0235876dc",
+  "metrics/hao2021_50k/n_clusters/.default/n_clusters_metrics.jsonl": "42e3b9f5f386d215300863e2f32f1ee159a9136db5b7216a1df769e857d53df8"
+ },
+ "ended": "2026-10-11T13:14:04+0200"
+}
