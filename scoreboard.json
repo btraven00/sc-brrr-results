@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T14:21:27+0200",
+ "generated": "2026-10-12T14:24:13+0200",
  "entries": [
   {
    "entry": "baselines/rsc",
@@ -21,12 +21,12 @@
    "walltime_mean": 0.539,
    "walltime_sd": 0.021,
    "n": 11,
+   "warmup_pca": 9.214,
+   "knn": 0.025,
    "warmup_cluster": 0.748,
    "pca": 0.271,
    "warmup_knn": 7.045,
    "cluster": 0.235,
-   "knn": 0.025,
-   "warmup_pca": 9.214,
    "warmup": 17.01,
    "peak_ram_mb": 1558.2,
    "rss_peak_mb": 1836.7,
@@ -65,12 +65,12 @@
    "walltime_mean": 0.53,
    "walltime_sd": 0.007,
    "n": 11,
-   "warmup_knn": 6.95,
-   "knn": 0.024,
-   "warmup_cluster": 0.845,
    "warmup_pca": 9.27,
+   "knn": 0.024,
+   "warmup_knn": 6.95,
    "pca": 0.266,
    "cluster": 0.236,
+   "warmup_cluster": 0.845,
    "warmup": 17.06,
    "peak_ram_mb": 1534.9,
    "rss_peak_mb": 1820.0,
@@ -109,12 +109,12 @@
    "walltime_mean": 0.62,
    "walltime_sd": 0.23,
    "n": 110,
-   "cluster": 0.233,
-   "warmup_pca": 9.12,
    "warmup_knn": 6.78,
-   "warmup_cluster": 0.853,
+   "warmup_pca": 9.12,
    "pca": 0.272,
+   "cluster": 0.233,
    "knn": 0.024,
+   "warmup_cluster": 0.853,
    "warmup": 16.72,
    "peak_ram_mb": 1539.6,
    "rss_peak_mb": 1892.3,
@@ -154,11 +154,11 @@
    "walltime_sd": 2.663,
    "n": 99,
    "warmup_pca": 9.816,
-   "warmup_cluster": 1.208,
-   "cluster": 0.603,
-   "knn": 0.172,
    "pca": 0.583,
    "warmup_knn": 6.985,
+   "warmup_cluster": 1.208,
+   "knn": 0.172,
+   "cluster": 0.603,
    "warmup": 17.99,
    "peak_ram_mb": 2814.9,
    "rss_peak_mb": 2638.3,
@@ -179,9 +179,9 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "baseline": true,
-   "runs": 8,
+   "runs": 9,
    "commit": "5203cce",
    "label": "GPU baseline: omni-scrna/rapids-singlecell, PCA (covariance eigh) -> kNN (cuVS brute) -> Leiden, fused",
    "tool": "rapids-singlecell",
@@ -194,15 +194,15 @@
    "gpu": "NVIDIA L4",
    "status": "ok",
    "walltime": 2.458,
-   "walltime_mean": 5.018,
-   "walltime_sd": 6.85,
-   "n": 88,
+   "walltime_mean": 4.782,
+   "walltime_sd": 6.491,
+   "n": 99,
+   "warmup_knn": 7.389,
+   "cluster": 0.951,
    "knn": 0.561,
    "pca": 0.944,
-   "warmup_knn": 7.394,
-   "cluster": 0.951,
-   "warmup_pca": 10.418,
    "warmup_cluster": 1.559,
+   "warmup_pca": 10.424,
    "warmup": 19.53,
    "peak_ram_mb": 4502.8,
    "rss_peak_mb": 3586.4,
@@ -214,12 +214,12 @@
    "n_clusters": 27,
    "n_clusters_up": 2,
    "n_clusters_down": 1,
-   "n_clusters_n": 88,
+   "n_clusters_n": 99,
    "time_to_result": 23.7,
    "cores": 1.1,
    "path": "baselines/rsc",
    "submitted": null,
-   "scored": "2026-10-12T06:01:39+0200"
+   "scored": "2026-10-12T14:24:12+0200"
   },
   {
    "entry": "baselines/scanpy",
@@ -242,11 +242,11 @@
    "walltime_sd": 5.253,
    "n": 11,
    "knn": 1.353,
-   "warmup_cluster": 0.137,
-   "cluster": 0.243,
-   "warmup_knn": 4.901,
-   "pca": 2.044,
    "warmup_pca": 1.792,
+   "warmup_knn": 4.901,
+   "cluster": 0.243,
+   "warmup_cluster": 0.137,
+   "pca": 2.044,
    "warmup": 6.83,
    "peak_ram_mb": 937.7,
    "rss_peak_mb": 871.1,
@@ -285,11 +285,11 @@
    "walltime_mean": 3.65,
    "walltime_sd": 0.024,
    "n": 11,
-   "cluster": 0.237,
-   "pca": 2.033,
-   "warmup_cluster": 0.327,
-   "knn": 1.375,
    "warmup_pca": 2.894,
+   "warmup_cluster": 0.327,
+   "pca": 2.033,
+   "knn": 1.375,
+   "cluster": 0.237,
    "warmup_knn": 19.688,
    "warmup": 22.91,
    "peak_ram_mb": 931.9,
@@ -329,12 +329,12 @@
    "walltime_mean": 3.837,
    "walltime_sd": 0.52,
    "n": 99,
-   "pca": 2.0,
+   "warmup_cluster": 0.329,
    "knn": 1.358,
    "warmup_knn": 19.443,
-   "cluster": 0.237,
    "warmup_pca": 2.833,
-   "warmup_cluster": 0.329,
+   "pca": 2.0,
+   "cluster": 0.237,
    "warmup": 22.9,
    "peak_ram_mb": 944.0,
    "rss_peak_mb": 877.5,
@@ -373,12 +373,12 @@
    "walltime_mean": 13.901,
    "walltime_sd": 0.261,
    "n": 88,
-   "warmup_cluster": 1.562,
    "warmup_knn": 21.833,
-   "warmup_pca": 9.445,
+   "warmup_cluster": 1.562,
    "pca": 8.499,
-   "knn": 3.896,
    "cluster": 1.393,
+   "warmup_pca": 9.445,
+   "knn": 3.896,
    "warmup": 32.99,
    "peak_ram_mb": 1998.7,
    "rss_peak_mb": 1356.3,
@@ -417,12 +417,12 @@
    "walltime_mean": 28.351,
    "walltime_sd": 0.25,
    "n": 88,
-   "warmup_pca": 17.88,
    "cluster": 3.362,
+   "warmup_cluster": 3.495,
+   "warmup_pca": 17.88,
+   "warmup_knn": 25.889,
    "pca": 16.938,
    "knn": 7.995,
-   "warmup_cluster": 3.495,
-   "warmup_knn": 25.889,
    "warmup": 47.57,
    "peak_ram_mb": 3414.2,
    "rss_peak_mb": 2079.5,
@@ -461,12 +461,12 @@
    "walltime_mean": 2.024,
    "walltime_sd": 0.046,
    "n": 11,
-   "knn": 0.163,
-   "cluster": 0.18,
-   "warmup_knn": 3.67,
    "warmup_cluster": 0.197,
-   "warmup_pca": 0.801,
+   "warmup_knn": 3.67,
+   "cluster": 0.18,
    "pca": 1.676,
+   "warmup_pca": 0.801,
+   "knn": 0.163,
    "warmup": 4.67,
    "peak_ram_mb": 556.2,
    "rss_peak_mb": 561.2,
@@ -505,12 +505,12 @@
    "walltime_mean": 2.028,
    "walltime_sd": 0.088,
    "n": 11,
-   "warmup_pca": 0.823,
-   "warmup_knn": 3.686,
+   "cluster": 0.186,
    "pca": 1.684,
    "warmup_cluster": 0.197,
+   "warmup_knn": 3.686,
+   "warmup_pca": 0.823,
    "knn": 0.172,
-   "cluster": 0.186,
    "warmup": 4.71,
    "peak_ram_mb": 597.5,
    "rss_peak_mb": 558.8,
@@ -549,12 +549,12 @@
    "walltime_mean": 2.24,
    "walltime_sd": 0.276,
    "n": 11,
+   "warmup_knn": 4.303,
+   "warmup_pca": 0.968,
    "warmup_cluster": 0.257,
    "cluster": 0.196,
-   "pca": 1.757,
-   "warmup_pca": 0.968,
    "knn": 0.182,
-   "warmup_knn": 4.303,
+   "pca": 1.757,
    "warmup": 5.53,
    "peak_ram_mb": 600.6,
    "rss_peak_mb": 561.3,
@@ -593,12 +593,12 @@
    "walltime_mean": 2.229,
    "walltime_sd": 0.107,
    "n": 11,
-   "knn": 0.172,
    "warmup_knn": 4.015,
-   "pca": 1.845,
-   "cluster": 0.203,
-   "warmup_cluster": 0.218,
    "warmup_pca": 0.913,
+   "pca": 1.845,
+   "knn": 0.172,
+   "warmup_cluster": 0.218,
+   "cluster": 0.203,
    "warmup": 5.15,
    "peak_ram_mb": 557.2,
    "rss_peak_mb": 558.8,
@@ -638,11 +638,11 @@
    "walltime_sd": 0.177,
    "n": 11,
    "pca": 1.735,
-   "cluster": 0.191,
-   "warmup_cluster": 0.21,
-   "warmup_knn": 3.937,
    "warmup_pca": 0.845,
+   "warmup_knn": 3.937,
    "knn": 0.172,
+   "warmup_cluster": 0.21,
+   "cluster": 0.191,
    "warmup": 4.99,
    "peak_ram_mb": 555.4,
    "rss_peak_mb": 553.6,
@@ -681,12 +681,12 @@
    "walltime_mean": 2.426,
    "walltime_sd": 0.015,
    "n": 11,
+   "knn": 0.161,
+   "cluster": 0.235,
+   "pca": 2.029,
    "warmup_cluster": 0.18,
    "warmup_pca": 1.0,
-   "cluster": 0.235,
    "warmup_knn": 4.978,
-   "pca": 2.029,
-   "knn": 0.161,
    "warmup": 6.16,
    "peak_ram_mb": 560.2,
    "rss_peak_mb": 566.5,
@@ -11797,7 +11797,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11809,7 +11809,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11821,7 +11821,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11833,7 +11833,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11845,7 +11845,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11857,7 +11857,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11869,7 +11869,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11881,7 +11881,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11893,7 +11893,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11905,7 +11905,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11917,7 +11917,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11929,7 +11929,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11941,7 +11941,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11953,7 +11953,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11965,7 +11965,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11977,7 +11977,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -11989,7 +11989,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12001,7 +12001,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12013,7 +12013,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12025,7 +12025,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12037,7 +12037,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12049,7 +12049,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12061,7 +12061,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12073,7 +12073,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12085,7 +12085,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12097,7 +12097,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12109,7 +12109,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12121,7 +12121,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12133,7 +12133,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12145,7 +12145,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12157,7 +12157,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12169,7 +12169,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12181,7 +12181,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12193,7 +12193,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12205,7 +12205,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12217,7 +12217,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12229,7 +12229,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12241,7 +12241,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12253,7 +12253,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12265,7 +12265,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12277,7 +12277,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12289,7 +12289,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12301,7 +12301,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12313,7 +12313,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261009T1912",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12325,7 +12325,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12337,7 +12337,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12349,7 +12349,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12361,7 +12361,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12373,7 +12373,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12385,7 +12385,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12397,7 +12397,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12409,7 +12409,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12421,7 +12421,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12433,7 +12433,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12445,7 +12445,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12457,7 +12457,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12469,7 +12469,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12481,7 +12481,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12493,7 +12493,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12505,7 +12505,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12517,7 +12517,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12529,7 +12529,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12541,7 +12541,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12553,7 +12553,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12565,7 +12565,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12577,7 +12577,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12589,7 +12589,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12601,7 +12601,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12613,7 +12613,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12625,7 +12625,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12637,7 +12637,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12649,7 +12649,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12661,7 +12661,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12673,7 +12673,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12685,7 +12685,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12697,7 +12697,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12709,7 +12709,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12721,7 +12721,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12733,7 +12733,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12745,7 +12745,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12757,7 +12757,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12769,7 +12769,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12781,7 +12781,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12793,7 +12793,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12805,7 +12805,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12817,7 +12817,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12829,7 +12829,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12841,7 +12841,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T0341",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12853,7 +12853,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12865,7 +12865,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12877,7 +12877,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12889,7 +12889,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12901,7 +12901,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12913,7 +12913,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12925,7 +12925,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12937,7 +12937,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12949,7 +12949,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12961,7 +12961,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12973,7 +12973,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12985,7 +12985,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -12997,7 +12997,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13009,7 +13009,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13021,7 +13021,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13033,7 +13033,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13045,7 +13045,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13057,7 +13057,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13069,7 +13069,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13081,7 +13081,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13093,7 +13093,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13105,7 +13105,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13117,7 +13117,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13129,7 +13129,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13141,7 +13141,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13153,7 +13153,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13165,7 +13165,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13177,7 +13177,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13189,7 +13189,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13201,7 +13201,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13213,7 +13213,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13225,7 +13225,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13237,7 +13237,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13249,7 +13249,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13261,7 +13261,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13273,7 +13273,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13285,7 +13285,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13297,7 +13297,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13309,7 +13309,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13321,7 +13321,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13333,7 +13333,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13345,7 +13345,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13357,7 +13357,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13369,7 +13369,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T1206",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13381,7 +13381,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13393,7 +13393,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13405,7 +13405,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13417,7 +13417,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13429,7 +13429,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13441,7 +13441,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13453,7 +13453,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13465,7 +13465,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13477,7 +13477,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13489,7 +13489,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13501,7 +13501,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13513,7 +13513,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13525,7 +13525,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13537,7 +13537,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13549,7 +13549,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13561,7 +13561,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13573,7 +13573,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13585,7 +13585,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13597,7 +13597,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13609,7 +13609,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13621,7 +13621,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13633,7 +13633,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13645,7 +13645,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13657,7 +13657,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13669,7 +13669,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13681,7 +13681,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13693,7 +13693,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13705,7 +13705,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13717,7 +13717,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13729,7 +13729,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13741,7 +13741,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13753,7 +13753,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13765,7 +13765,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13777,7 +13777,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13789,7 +13789,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13801,7 +13801,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13813,7 +13813,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13825,7 +13825,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13837,7 +13837,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13849,7 +13849,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13861,7 +13861,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13873,7 +13873,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13885,7 +13885,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13897,7 +13897,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261010T2029",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13909,7 +13909,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13921,7 +13921,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13933,7 +13933,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13945,7 +13945,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13957,7 +13957,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13969,7 +13969,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13981,7 +13981,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -13993,7 +13993,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14005,7 +14005,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14017,7 +14017,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14029,7 +14029,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14041,7 +14041,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14053,7 +14053,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14065,7 +14065,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14077,7 +14077,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14089,7 +14089,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14101,7 +14101,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14113,7 +14113,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14125,7 +14125,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14137,7 +14137,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14149,7 +14149,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14161,7 +14161,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14173,7 +14173,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14185,7 +14185,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14197,7 +14197,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14209,7 +14209,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14221,7 +14221,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14233,7 +14233,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14245,7 +14245,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14257,7 +14257,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14269,7 +14269,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14281,7 +14281,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14293,7 +14293,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14305,7 +14305,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14317,7 +14317,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14329,7 +14329,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14341,7 +14341,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14353,7 +14353,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14365,7 +14365,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14377,7 +14377,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14389,7 +14389,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14401,7 +14401,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14413,7 +14413,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14425,7 +14425,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T0451",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14437,7 +14437,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14449,7 +14449,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14461,7 +14461,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14473,7 +14473,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14485,7 +14485,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14497,7 +14497,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14509,7 +14509,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14521,7 +14521,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14533,7 +14533,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14545,7 +14545,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14557,7 +14557,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14569,7 +14569,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14581,7 +14581,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14593,7 +14593,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14605,7 +14605,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14617,7 +14617,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14629,7 +14629,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14641,7 +14641,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14653,7 +14653,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14665,7 +14665,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14677,7 +14677,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14689,7 +14689,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14701,7 +14701,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14713,7 +14713,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14725,7 +14725,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14737,7 +14737,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14749,7 +14749,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14761,7 +14761,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14773,7 +14773,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14785,7 +14785,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14797,7 +14797,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14809,7 +14809,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14821,7 +14821,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14833,7 +14833,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14845,7 +14845,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14857,7 +14857,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14869,7 +14869,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14881,7 +14881,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14893,7 +14893,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14905,7 +14905,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14917,7 +14917,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14929,7 +14929,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14941,7 +14941,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14953,7 +14953,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T1314",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14965,7 +14965,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14977,7 +14977,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -14989,7 +14989,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15001,7 +15001,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15013,7 +15013,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15025,7 +15025,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15037,7 +15037,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15049,7 +15049,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15061,7 +15061,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15073,7 +15073,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15085,7 +15085,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15097,7 +15097,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15109,7 +15109,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15121,7 +15121,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15133,7 +15133,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15145,7 +15145,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15157,7 +15157,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15169,7 +15169,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15181,7 +15181,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15193,7 +15193,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15205,7 +15205,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15217,7 +15217,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15229,7 +15229,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15241,7 +15241,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15253,7 +15253,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15265,7 +15265,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15277,7 +15277,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15289,7 +15289,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15301,7 +15301,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15313,7 +15313,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15325,7 +15325,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15337,7 +15337,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15349,7 +15349,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15361,7 +15361,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15373,7 +15373,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15385,7 +15385,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15397,7 +15397,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15409,7 +15409,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15421,7 +15421,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15433,7 +15433,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15445,7 +15445,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15457,7 +15457,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15469,7 +15469,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15481,7 +15481,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261011T2136",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15493,7 +15493,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15505,7 +15505,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15517,7 +15517,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15529,7 +15529,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15541,7 +15541,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15553,7 +15553,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15565,7 +15565,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15577,7 +15577,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15589,7 +15589,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15601,7 +15601,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15613,7 +15613,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15625,7 +15625,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15637,7 +15637,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15649,7 +15649,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15661,7 +15661,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15673,7 +15673,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15685,7 +15685,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15697,7 +15697,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15709,7 +15709,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15721,7 +15721,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15733,7 +15733,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15745,7 +15745,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15757,7 +15757,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15769,7 +15769,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15781,7 +15781,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15793,7 +15793,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15805,7 +15805,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15817,7 +15817,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15829,7 +15829,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15841,7 +15841,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15853,7 +15853,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15865,7 +15865,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15877,7 +15877,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15889,7 +15889,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15901,7 +15901,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15913,7 +15913,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15925,7 +15925,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15937,7 +15937,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15949,7 +15949,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15961,7 +15961,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15973,7 +15973,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15985,7 +15985,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -15997,7 +15997,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -16009,7 +16009,7 @@
   },
   {
    "entry": "baselines/rsc",
-   "version": "8 runs",
+   "version": "9 runs",
    "run": "20261012T0559",
    "size": "100k",
    "plan": "cbf3fb0c",
@@ -16018,6 +16018,534 @@
    "seed": 5,
    "step": "total",
    "value": 2.464
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 0,
+   "step": "pca",
+   "value": 0.928
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.559
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.937
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 0,
+   "step": "total",
+   "value": 2.426
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 0,
+   "step": "pca",
+   "value": 0.928
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.564
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.935
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 0,
+   "step": "total",
+   "value": 2.428
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 0,
+   "step": "pca",
+   "value": 0.923
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.561
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.939
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 0,
+   "step": "total",
+   "value": 2.424
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 0,
+   "step": "pca",
+   "value": 0.935
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.558
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.938
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 0,
+   "step": "total",
+   "value": 2.431
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 0,
+   "step": "pca",
+   "value": 0.931
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.56
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.972
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 0,
+   "step": "total",
+   "value": 2.463
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 5,
+   "seed": 0,
+   "step": "pca",
+   "value": 0.925
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 5,
+   "seed": 0,
+   "step": "knn",
+   "value": 0.558
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 5,
+   "seed": 0,
+   "step": "cluster",
+   "value": 0.935
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 5,
+   "seed": 0,
+   "step": "total",
+   "value": 2.421
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 1,
+   "step": "pca",
+   "value": 1.907
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 1,
+   "step": "knn",
+   "value": 0.562
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 1,
+   "step": "cluster",
+   "value": 0.972
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 1,
+   "step": "total",
+   "value": 3.441
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 2,
+   "step": "pca",
+   "value": 1.904
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 2,
+   "step": "knn",
+   "value": 0.561
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 2,
+   "step": "cluster",
+   "value": 0.952
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 2,
+   "step": "total",
+   "value": 3.419
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 3,
+   "step": "pca",
+   "value": 1.908
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 3,
+   "step": "knn",
+   "value": 0.559
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 3,
+   "step": "cluster",
+   "value": 0.99
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 3,
+   "step": "total",
+   "value": 3.458
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 4,
+   "step": "pca",
+   "value": 2.007
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 4,
+   "step": "knn",
+   "value": 0.561
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 4,
+   "step": "cluster",
+   "value": 0.968
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 4,
+   "step": "total",
+   "value": 3.537
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 5,
+   "step": "pca",
+   "value": 1.924
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 5,
+   "step": "knn",
+   "value": 0.56
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 5,
+   "step": "cluster",
+   "value": 0.962
+  },
+  {
+   "entry": "baselines/rsc",
+   "version": "9 runs",
+   "run": "20261012T1421",
+   "size": "100k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 5,
+   "step": "total",
+   "value": 3.447
   },
   {
    "entry": "baselines/scanpy",
