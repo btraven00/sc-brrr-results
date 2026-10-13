@@ -1,0 +1,15 @@
+{"metric": "n_clusters", "value": 20, "subject": "data/hao2021_10k/.68c8db81/pipeline/reference/.31d5c367", "rep": null, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 20, "subject": "data/hao2021_10k/.68c8db81/pipeline/reference/.31d5c367", "rep": 0, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 18, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.a45acb67", "rep": null, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 18, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.a45acb67", "rep": 0, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 18, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.a45acb67", "rep": 1, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 18, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.a45acb67", "rep": 2, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 18, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.a45acb67", "rep": 3, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 18, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.a45acb67", "rep": 4, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 18, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.a45acb67", "rep": 5, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 19, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.d4e5533d", "rep": null, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 19, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.d4e5533d", "rep": 0, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 19, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.d4e5533d", "rep": 1, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 19, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.d4e5533d", "rep": 2, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 19, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.d4e5533d", "rep": 3, "attrs": {"n_cells": 9999}}
+{"metric": "n_clusters", "value": 20, "subject": "data/hao2021_10k/.68c8db81/pipeline/rsc/.d4e5533d", "rep": 4, "attrs": {"n_cells": 9999}}
