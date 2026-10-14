@@ -1,0 +1,38 @@
+hao2021_50k.h5ad: in the cache, sha256 ok
+setup (network on) ...
+data_hao2021_50k_0ddcfd80 (2 cores, 6144 MB, 30 min) ... ok
+data_hao2021_50k_0ddcfd80_pipeline_reference_31d5c367 (8 cores, 6144 MB, 20 min) ... ok
+data_hao2021_50k_0ddcfd80_pipeline_scanpy_fbb37862 (8 cores, 6144 MB, 20 min) ... ok
+data_hao2021_50k_0ddcfd80_pipeline_scanpy_f7e456ae (8 cores, 6144 MB, 20 min) ... ok
+metrics_n_clusters_hao2021_50k_default (2 cores, 6144 MB, 30 min) ... ok
+metrics_contract_hao2021_50k_default (2 cores, 6144 MB, 30 min) ... ok
+
+job                                          end                 wall     mem peak / cap    denet  growth/rep      env
+data_hao2021_50k_0ddcfd80                    ok                  2.8s      648 / 6144   MB      0MB           -    220MB
+pipeline_reference_31d5c367                  ok                 29.8s      896 / 6144   MB    824MB           -    1.1GB
+pipeline_scanpy_fbb37862                     ok                130.9s     1993 / 6144   MB   1220MB     +1.1 MB    1.1GB
+pipeline_scanpy_f7e456ae                     ok                115.4s     1898 / 6144   MB   1195MB     -2.3 MB    1.1GB
+metrics_n_clusters_hao2021_50k_default       ok                  3.0s      123 / 6144   MB      0MB           -    1.1GB
+metrics_contract_hao2021_50k_default         ok                  9.4s      228 / 6144   MB      0MB           -    1.1GB
+6/6 jobs ok -> <repo>/runs/baselines-scanpy-20261014T1646-50k-20261014T164656/results
+shape: (34, 4)
+┌────────────────────────┬─────────────┬─────┬─────────┐
+│ metric                 ┆ method      ┆ n   ┆ median  │
+│ ---                    ┆ ---         ┆ --- ┆ ---     │
+│ str                    ┆ str         ┆ u32 ┆ f64     │
+╞════════════════════════╪═════════════╪═════╪═════════╡
+│ contract_ok            ┆ reference   ┆ 6   ┆ 1.0     │
+│ contract_ok            ┆ scanpy      ┆ 39  ┆ 1.0     │
+│ cpu_s                  ┆ null        ┆ 2   ┆ 6.05    │
+│ cpu_s                  ┆ hao2021_50k ┆ 1   ┆ 2.6     │
+│ cpu_s                  ┆ reference   ┆ 1   ┆ 43.9    │
+│ …                      ┆ …           ┆ …   ┆ …       │
+│ time_to_result_s       ┆ scanpy      ┆ 2   ┆ 38.755  │
+│ walltime_s             ┆ reference   ┆ 1   ┆ 21.573  │
+│ walltime_s             ┆ scanpy      ┆ 11  ┆ 14.899  │
+│ warmup_step_walltime_s ┆ scanpy      ┆ 6   ┆ 10.2885 │
+│ warmup_walltime_s      ┆ scanpy      ┆ 2   ┆ 35.704  │
+└────────────────────────┴─────────────┴─────┴─────────┘
+153 records -> <repo>/runs/baselines-scanpy-20261014T1646-50k-20261014T164656/results/metrics.parquet
+baselines/scanpy 20261014T1646 (5203cce) plan cbf3fb0c host c931f405 50k: ok (run baselines-scanpy-20261014T1646-50k-20261014T164656)
+OUTCOME {"outcome": "ok", "reason": "baselines/scanpy 20261014T1646 (5203cce) plan cbf3fb0c host c931f405 50k: ok (run baselines-scanpy-20261014T1646-50k-20261014T164656)", "result": "baselines/scanpy/20261014T1646/cbf3fb0c/c931f405/50k", "plan": "cbf3fb0c", "host": "c931f405", "run": "baselines-scanpy-20261014T1646-50k-20261014T164656", "log": "<repo>/runs/baselines-scanpy-20261014T1646-50k-20261014T164656/runner.log"}
