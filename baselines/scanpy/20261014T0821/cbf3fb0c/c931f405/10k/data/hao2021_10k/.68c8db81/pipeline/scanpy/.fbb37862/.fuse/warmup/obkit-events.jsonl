@@ -1,0 +1,14 @@
+{"ts":"2026-10-14T06:22:13.596Z","event":"warmup","phase":"start","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:13.596Z","event":"stage:pca","phase":"start","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:14.437Z","event":"load","phase":"start","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:14.469Z","event":"load","phase":"end","pid":36,"host":"205bc7d5b089","attrs":{"n_cells":9999,"n_genes":1991}}
+{"ts":"2026-10-14T06:22:14.470Z","event":"pca","phase":"start","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:16.488Z","event":"pca","phase":"end","pid":36,"host":"205bc7d5b089","attrs":{"solver":"arpack","n_components":50}}
+{"ts":"2026-10-14T06:22:16.488Z","event":"write","phase":"start","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:16.489Z","event":"write","phase":"end","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:16.491Z","event":"stage:pca","phase":"end","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:16.491Z","event":"stage:knn","phase":"start","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:36.557Z","event":"stage:knn","phase":"end","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:36.557Z","event":"stage:cluster","phase":"start","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:36.901Z","event":"stage:cluster","phase":"end","pid":36,"host":"205bc7d5b089"}
+{"ts":"2026-10-14T06:22:36.901Z","event":"warmup","phase":"end","pid":36,"host":"205bc7d5b089"}
