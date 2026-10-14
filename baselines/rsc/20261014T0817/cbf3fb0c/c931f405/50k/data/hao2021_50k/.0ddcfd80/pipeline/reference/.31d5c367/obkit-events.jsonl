@@ -1,0 +1,13 @@
+{"ts":"2026-10-14T06:17:21.179Z","event":"load","phase":"start","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:21.280Z","event":"load","phase":"end","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:21.282Z","event":"replicate","phase":"start","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:21.282Z","event":"pca","phase":"start","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:29.817Z","event":"pca","phase":"end","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:29.818Z","event":"knn","phase":"start","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:39.785Z","event":"knn","phase":"end","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:39.785Z","event":"cluster","phase":"start","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:41.302Z","event":"cluster","phase":"end","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:41.302Z","event":"replicate","phase":"end","pid":36,"host":"35bbd90d65a6","attrs":{"replicate":0,"seed":0,"rss_mb":767.1}}
+{"ts":"2026-10-14T06:17:41.302Z","event":"write","phase":"start","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:45.009Z","event":"write","phase":"end","pid":36,"host":"35bbd90d65a6"}
+{"ts":"2026-10-14T06:17:45.010Z","event":"exit","phase":"end","pid":36,"host":"35bbd90d65a6","attrs":{"replicate":0,"done":1,"reason":"ok"}}
