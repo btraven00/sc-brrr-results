@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-14T16:46:54+0200",
+ "generated": "2026-10-14T16:51:56+0200",
  "entries": [
   {
    "entry": "baselines/rsc",
@@ -21,12 +21,12 @@
    "walltime_mean": 0.539,
    "walltime_sd": 0.021,
    "n": 11,
-   "cluster": 0.235,
-   "pca": 0.271,
-   "knn": 0.025,
    "warmup_knn": 7.045,
-   "warmup_pca": 9.214,
+   "pca": 0.271,
    "warmup_cluster": 0.748,
+   "knn": 0.025,
+   "warmup_pca": 9.214,
+   "cluster": 0.235,
    "warmup": 17.01,
    "peak_ram_mb": 1558.2,
    "rss_peak_mb": 1836.7,
@@ -65,11 +65,11 @@
    "walltime_mean": 0.53,
    "walltime_sd": 0.007,
    "n": 11,
+   "cluster": 0.236,
+   "pca": 0.266,
+   "warmup_pca": 9.27,
    "warmup_cluster": 0.845,
    "knn": 0.024,
-   "cluster": 0.236,
-   "warmup_pca": 9.27,
-   "pca": 0.266,
    "warmup_knn": 6.95,
    "warmup": 17.06,
    "peak_ram_mb": 1534.9,
@@ -109,12 +109,12 @@
    "walltime_mean": 0.591,
    "walltime_sd": 0.186,
    "n": 176,
+   "warmup_pca": 9.16,
+   "pca": 0.27,
+   "warmup_cluster": 0.855,
    "cluster": 0.234,
    "warmup_knn": 6.796,
-   "warmup_cluster": 0.855,
-   "warmup_pca": 9.16,
    "knn": 0.025,
-   "pca": 0.27,
    "warmup": 16.76,
    "peak_ram_mb": 3493.4,
    "rss_peak_mb": 1925.8,
@@ -154,11 +154,11 @@
    "walltime_sd": 2.143,
    "n": 165,
    "warmup_cluster": 1.211,
-   "pca": 0.577,
    "cluster": 0.607,
+   "warmup_pca": 9.908,
+   "pca": 0.577,
    "knn": 0.172,
    "warmup_knn": 6.985,
-   "warmup_pca": 9.908,
    "warmup": 18.11,
    "peak_ram_mb": 2814.9,
    "rss_peak_mb": 2638.3,
@@ -197,12 +197,12 @@
    "walltime_mean": 3.858,
    "walltime_sd": 5.144,
    "n": 165,
+   "pca": 0.943,
+   "knn": 0.561,
+   "cluster": 0.961,
+   "warmup_knn": 7.449,
    "warmup_pca": 10.468,
    "warmup_cluster": 1.567,
-   "warmup_knn": 7.449,
-   "knn": 0.561,
-   "pca": 0.943,
-   "cluster": 0.961,
    "warmup": 19.53,
    "peak_ram_mb": 4502.8,
    "rss_peak_mb": 3592.0,
@@ -241,12 +241,12 @@
    "walltime_mean": 6.023,
    "walltime_sd": 5.253,
    "n": 11,
-   "warmup_pca": 1.792,
    "pca": 2.044,
-   "warmup_knn": 4.901,
-   "knn": 1.353,
    "cluster": 0.243,
+   "knn": 1.353,
+   "warmup_pca": 1.792,
    "warmup_cluster": 0.137,
+   "warmup_knn": 4.901,
    "warmup": 6.83,
    "peak_ram_mb": 937.7,
    "rss_peak_mb": 871.1,
@@ -285,9 +285,9 @@
    "walltime_mean": 3.65,
    "walltime_sd": 0.024,
    "n": 11,
-   "warmup_cluster": 0.327,
    "knn": 1.375,
    "warmup_knn": 19.688,
+   "warmup_cluster": 0.327,
    "pca": 2.033,
    "cluster": 0.237,
    "warmup_pca": 2.894,
@@ -329,12 +329,12 @@
    "walltime_mean": 3.777,
    "walltime_sd": 0.404,
    "n": 176,
-   "pca": 2.001,
+   "warmup_knn": 19.834,
+   "warmup_pca": 2.884,
    "cluster": 0.238,
    "warmup_cluster": 0.331,
    "knn": 1.363,
-   "warmup_pca": 2.884,
-   "warmup_knn": 19.834,
+   "pca": 2.001,
    "warmup": 23.03,
    "peak_ram_mb": 1036.2,
    "rss_peak_mb": 877.5,
@@ -355,9 +355,9 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "baseline": true,
-   "runs": 14,
+   "runs": 15,
    "commit": "5203cce",
    "label": "CPU baseline: omni-scrna/scanpy (+ shared-io), PCA (arpack) -> kNN (pynndescent) -> Leiden (igraph), fused",
    "tool": "scanpy",
@@ -369,33 +369,33 @@
    "cpu_model": "AMD EPYC 7763 64-Core Processor",
    "gpu": "NVIDIA L4",
    "status": "ok",
-   "walltime": 13.82,
-   "walltime_mean": 14.025,
-   "walltime_sd": 0.431,
-   "n": 154,
-   "pca": 8.513,
-   "warmup_cluster": 1.564,
-   "knn": 3.902,
-   "warmup_knn": 22.197,
-   "warmup_pca": 9.462,
-   "cluster": 1.399,
-   "warmup": 33.18,
+   "walltime": 13.828,
+   "walltime_mean": 14.084,
+   "walltime_sd": 0.472,
+   "n": 165,
+   "warmup_pca": 9.475,
+   "pca": 8.522,
+   "knn": 3.908,
+   "warmup_knn": 22.224,
+   "warmup_cluster": 1.565,
+   "cluster": 1.402,
+   "warmup": 33.23,
    "peak_ram_mb": 1998.7,
    "rss_peak_mb": 1401.5,
    "vram_mb": null,
-   "growth_mb": 8.8,
+   "growth_mb": 8.4,
    "env_mb": 1121.1,
    "packages": 150.0,
    "contract_failed": 0,
    "n_clusters": 27,
    "n_clusters_up": 1,
    "n_clusters_down": 1,
-   "n_clusters_n": 154,
+   "n_clusters_n": 165,
    "time_to_result": 36.1,
    "cores": 1.1,
    "path": "baselines/scanpy",
    "submitted": null,
-   "scored": "2026-10-14T08:28:32+0200"
+   "scored": "2026-10-14T16:51:55+0200"
   },
   {
    "entry": "baselines/scanpy",
@@ -417,12 +417,12 @@
    "walltime_mean": 28.579,
    "walltime_sd": 0.701,
    "n": 154,
-   "cluster": 3.357,
-   "warmup_pca": 17.888,
    "knn": 8.004,
-   "warmup_cluster": 3.504,
    "warmup_knn": 26.383,
+   "warmup_cluster": 3.504,
+   "cluster": 3.357,
    "pca": 16.953,
+   "warmup_pca": 17.888,
    "warmup": 47.7,
    "peak_ram_mb": 3414.2,
    "rss_peak_mb": 2079.5,
@@ -461,8 +461,8 @@
    "walltime_mean": 2.024,
    "walltime_sd": 0.046,
    "n": 11,
-   "pca": 1.676,
    "warmup_pca": 0.801,
+   "pca": 1.676,
    "warmup_knn": 3.67,
    "cluster": 0.18,
    "warmup_cluster": 0.197,
@@ -505,11 +505,11 @@
    "walltime_mean": 2.028,
    "walltime_sd": 0.088,
    "n": 11,
-   "cluster": 0.186,
-   "knn": 0.172,
-   "pca": 1.684,
-   "warmup_cluster": 0.197,
    "warmup_knn": 3.686,
+   "warmup_cluster": 0.197,
+   "knn": 0.172,
+   "cluster": 0.186,
+   "pca": 1.684,
    "warmup_pca": 0.823,
    "warmup": 4.71,
    "peak_ram_mb": 597.5,
@@ -549,12 +549,12 @@
    "walltime_mean": 2.24,
    "walltime_sd": 0.276,
    "n": 11,
-   "warmup_pca": 0.968,
+   "cluster": 0.196,
    "pca": 1.757,
-   "knn": 0.182,
+   "warmup_pca": 0.968,
    "warmup_cluster": 0.257,
    "warmup_knn": 4.303,
-   "cluster": 0.196,
+   "knn": 0.182,
    "warmup": 5.53,
    "peak_ram_mb": 600.6,
    "rss_peak_mb": 561.3,
@@ -593,12 +593,12 @@
    "walltime_mean": 2.229,
    "walltime_sd": 0.107,
    "n": 11,
-   "warmup_pca": 0.913,
+   "pca": 1.845,
    "warmup_knn": 4.015,
    "knn": 0.172,
    "cluster": 0.203,
-   "pca": 1.845,
    "warmup_cluster": 0.218,
+   "warmup_pca": 0.913,
    "warmup": 5.15,
    "peak_ram_mb": 557.2,
    "rss_peak_mb": 558.8,
@@ -637,12 +637,12 @@
    "walltime_mean": 2.124,
    "walltime_sd": 0.177,
    "n": 11,
-   "knn": 0.172,
    "warmup_cluster": 0.21,
-   "cluster": 0.191,
-   "pca": 1.735,
+   "knn": 0.172,
    "warmup_knn": 3.937,
+   "cluster": 0.191,
    "warmup_pca": 0.845,
+   "pca": 1.735,
    "warmup": 4.99,
    "peak_ram_mb": 555.4,
    "rss_peak_mb": 553.6,
@@ -681,11 +681,11 @@
    "walltime_mean": 2.426,
    "walltime_sd": 0.015,
    "n": 11,
-   "warmup_cluster": 0.18,
-   "pca": 2.029,
    "warmup_pca": 1.0,
-   "knn": 0.161,
    "cluster": 0.235,
+   "knn": 0.161,
+   "pca": 2.029,
+   "warmup_cluster": 0.18,
    "warmup_knn": 4.978,
    "warmup": 6.16,
    "peak_ram_mb": 560.2,
@@ -35557,7 +35557,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35569,7 +35569,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35581,7 +35581,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35593,7 +35593,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35605,7 +35605,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35617,7 +35617,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35629,7 +35629,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35641,7 +35641,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35653,7 +35653,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35665,7 +35665,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35677,7 +35677,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35689,7 +35689,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35701,7 +35701,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35713,7 +35713,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35725,7 +35725,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35737,7 +35737,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35749,7 +35749,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35761,7 +35761,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35773,7 +35773,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35785,7 +35785,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35797,7 +35797,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35809,7 +35809,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35821,7 +35821,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35833,7 +35833,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35845,7 +35845,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35857,7 +35857,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35869,7 +35869,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35881,7 +35881,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35893,7 +35893,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35905,7 +35905,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35917,7 +35917,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35929,7 +35929,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35941,7 +35941,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35953,7 +35953,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35965,7 +35965,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35977,7 +35977,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -35989,7 +35989,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36001,7 +36001,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36013,7 +36013,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36025,7 +36025,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36037,7 +36037,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36049,7 +36049,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36061,7 +36061,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36073,7 +36073,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261009T1919",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36085,7 +36085,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36097,7 +36097,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36109,7 +36109,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36121,7 +36121,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36133,7 +36133,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36145,7 +36145,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36157,7 +36157,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36169,7 +36169,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36181,7 +36181,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36193,7 +36193,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36205,7 +36205,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36217,7 +36217,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36229,7 +36229,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36241,7 +36241,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36253,7 +36253,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36265,7 +36265,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36277,7 +36277,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36289,7 +36289,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36301,7 +36301,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36313,7 +36313,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36325,7 +36325,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36337,7 +36337,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36349,7 +36349,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36361,7 +36361,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36373,7 +36373,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36385,7 +36385,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36397,7 +36397,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36409,7 +36409,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36421,7 +36421,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36433,7 +36433,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36445,7 +36445,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36457,7 +36457,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36469,7 +36469,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36481,7 +36481,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36493,7 +36493,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36505,7 +36505,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36517,7 +36517,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36529,7 +36529,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36541,7 +36541,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36553,7 +36553,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36565,7 +36565,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36577,7 +36577,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36589,7 +36589,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36601,7 +36601,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T0348",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36613,7 +36613,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36625,7 +36625,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36637,7 +36637,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36649,7 +36649,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36661,7 +36661,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36673,7 +36673,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36685,7 +36685,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36697,7 +36697,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36709,7 +36709,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36721,7 +36721,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36733,7 +36733,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36745,7 +36745,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36757,7 +36757,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36769,7 +36769,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36781,7 +36781,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36793,7 +36793,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36805,7 +36805,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36817,7 +36817,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36829,7 +36829,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36841,7 +36841,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36853,7 +36853,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36865,7 +36865,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36877,7 +36877,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36889,7 +36889,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36901,7 +36901,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36913,7 +36913,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36925,7 +36925,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36937,7 +36937,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36949,7 +36949,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36961,7 +36961,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36973,7 +36973,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36985,7 +36985,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -36997,7 +36997,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37009,7 +37009,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37021,7 +37021,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37033,7 +37033,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37045,7 +37045,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37057,7 +37057,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37069,7 +37069,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37081,7 +37081,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37093,7 +37093,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37105,7 +37105,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37117,7 +37117,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37129,7 +37129,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T1211",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37141,7 +37141,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37153,7 +37153,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37165,7 +37165,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37177,7 +37177,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37189,7 +37189,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37201,7 +37201,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37213,7 +37213,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37225,7 +37225,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37237,7 +37237,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37249,7 +37249,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37261,7 +37261,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37273,7 +37273,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37285,7 +37285,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37297,7 +37297,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37309,7 +37309,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37321,7 +37321,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37333,7 +37333,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37345,7 +37345,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37357,7 +37357,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37369,7 +37369,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37381,7 +37381,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37393,7 +37393,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37405,7 +37405,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37417,7 +37417,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37429,7 +37429,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37441,7 +37441,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37453,7 +37453,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37465,7 +37465,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37477,7 +37477,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37489,7 +37489,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37501,7 +37501,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37513,7 +37513,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37525,7 +37525,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37537,7 +37537,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37549,7 +37549,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37561,7 +37561,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37573,7 +37573,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37585,7 +37585,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37597,7 +37597,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37609,7 +37609,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37621,7 +37621,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37633,7 +37633,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37645,7 +37645,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37657,7 +37657,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261010T2034",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37669,7 +37669,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37681,7 +37681,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37693,7 +37693,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37705,7 +37705,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37717,7 +37717,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37729,7 +37729,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37741,7 +37741,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37753,7 +37753,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37765,7 +37765,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37777,7 +37777,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37789,7 +37789,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37801,7 +37801,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37813,7 +37813,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37825,7 +37825,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37837,7 +37837,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37849,7 +37849,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37861,7 +37861,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37873,7 +37873,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37885,7 +37885,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37897,7 +37897,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37909,7 +37909,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37921,7 +37921,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37933,7 +37933,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37945,7 +37945,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37957,7 +37957,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37969,7 +37969,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37981,7 +37981,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -37993,7 +37993,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38005,7 +38005,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38017,7 +38017,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38029,7 +38029,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38041,7 +38041,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38053,7 +38053,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38065,7 +38065,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38077,7 +38077,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38089,7 +38089,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38101,7 +38101,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38113,7 +38113,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38125,7 +38125,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38137,7 +38137,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38149,7 +38149,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38161,7 +38161,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38173,7 +38173,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38185,7 +38185,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T0456",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38197,7 +38197,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38209,7 +38209,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38221,7 +38221,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38233,7 +38233,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38245,7 +38245,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38257,7 +38257,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38269,7 +38269,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38281,7 +38281,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38293,7 +38293,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38305,7 +38305,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38317,7 +38317,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38329,7 +38329,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38341,7 +38341,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38353,7 +38353,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38365,7 +38365,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38377,7 +38377,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38389,7 +38389,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38401,7 +38401,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38413,7 +38413,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38425,7 +38425,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38437,7 +38437,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38449,7 +38449,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38461,7 +38461,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38473,7 +38473,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38485,7 +38485,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38497,7 +38497,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38509,7 +38509,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38521,7 +38521,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38533,7 +38533,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38545,7 +38545,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38557,7 +38557,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38569,7 +38569,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38581,7 +38581,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38593,7 +38593,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38605,7 +38605,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38617,7 +38617,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38629,7 +38629,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38641,7 +38641,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38653,7 +38653,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38665,7 +38665,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38677,7 +38677,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38689,7 +38689,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38701,7 +38701,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38713,7 +38713,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T1318",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38725,7 +38725,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38737,7 +38737,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38749,7 +38749,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38761,7 +38761,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38773,7 +38773,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38785,7 +38785,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38797,7 +38797,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38809,7 +38809,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38821,7 +38821,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38833,7 +38833,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38845,7 +38845,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38857,7 +38857,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38869,7 +38869,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38881,7 +38881,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38893,7 +38893,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38905,7 +38905,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38917,7 +38917,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38929,7 +38929,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38941,7 +38941,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38953,7 +38953,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38965,7 +38965,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38977,7 +38977,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -38989,7 +38989,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39001,7 +39001,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39013,7 +39013,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39025,7 +39025,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39037,7 +39037,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39049,7 +39049,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39061,7 +39061,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39073,7 +39073,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39085,7 +39085,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39097,7 +39097,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39109,7 +39109,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39121,7 +39121,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39133,7 +39133,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39145,7 +39145,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39157,7 +39157,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39169,7 +39169,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39181,7 +39181,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39193,7 +39193,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39205,7 +39205,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39217,7 +39217,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39229,7 +39229,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39241,7 +39241,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261011T2141",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39253,7 +39253,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39265,7 +39265,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39277,7 +39277,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39289,7 +39289,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39301,7 +39301,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39313,7 +39313,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39325,7 +39325,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39337,7 +39337,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39349,7 +39349,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39361,7 +39361,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39373,7 +39373,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39385,7 +39385,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39397,7 +39397,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39409,7 +39409,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39421,7 +39421,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39433,7 +39433,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39445,7 +39445,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39457,7 +39457,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39469,7 +39469,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39481,7 +39481,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39493,7 +39493,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39505,7 +39505,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39517,7 +39517,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39529,7 +39529,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39541,7 +39541,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39553,7 +39553,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39565,7 +39565,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39577,7 +39577,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39589,7 +39589,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39601,7 +39601,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39613,7 +39613,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39625,7 +39625,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39637,7 +39637,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39649,7 +39649,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39661,7 +39661,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39673,7 +39673,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39685,7 +39685,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39697,7 +39697,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39709,7 +39709,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39721,7 +39721,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39733,7 +39733,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39745,7 +39745,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39757,7 +39757,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39769,7 +39769,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T0603",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39781,7 +39781,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39793,7 +39793,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39805,7 +39805,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39817,7 +39817,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39829,7 +39829,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39841,7 +39841,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39853,7 +39853,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39865,7 +39865,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39877,7 +39877,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39889,7 +39889,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39901,7 +39901,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39913,7 +39913,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39925,7 +39925,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39937,7 +39937,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39949,7 +39949,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39961,7 +39961,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39973,7 +39973,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39985,7 +39985,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -39997,7 +39997,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40009,7 +40009,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40021,7 +40021,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40033,7 +40033,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40045,7 +40045,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40057,7 +40057,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40069,7 +40069,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40081,7 +40081,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40093,7 +40093,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40105,7 +40105,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40117,7 +40117,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40129,7 +40129,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40141,7 +40141,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40153,7 +40153,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40165,7 +40165,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40177,7 +40177,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40189,7 +40189,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40201,7 +40201,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40213,7 +40213,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40225,7 +40225,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40237,7 +40237,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40249,7 +40249,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40261,7 +40261,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40273,7 +40273,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40285,7 +40285,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40297,7 +40297,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T1426",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40309,7 +40309,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40321,7 +40321,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40333,7 +40333,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40345,7 +40345,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40357,7 +40357,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40369,7 +40369,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40381,7 +40381,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40393,7 +40393,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40405,7 +40405,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40417,7 +40417,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40429,7 +40429,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40441,7 +40441,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40453,7 +40453,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40465,7 +40465,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40477,7 +40477,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40489,7 +40489,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40501,7 +40501,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40513,7 +40513,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40525,7 +40525,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40537,7 +40537,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40549,7 +40549,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40561,7 +40561,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40573,7 +40573,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40585,7 +40585,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40597,7 +40597,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40609,7 +40609,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40621,7 +40621,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40633,7 +40633,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40645,7 +40645,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40657,7 +40657,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40669,7 +40669,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40681,7 +40681,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40693,7 +40693,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40705,7 +40705,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40717,7 +40717,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40729,7 +40729,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40741,7 +40741,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40753,7 +40753,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40765,7 +40765,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40777,7 +40777,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40789,7 +40789,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40801,7 +40801,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40813,7 +40813,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40825,7 +40825,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261012T2249",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40837,7 +40837,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40849,7 +40849,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40861,7 +40861,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40873,7 +40873,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40885,7 +40885,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40897,7 +40897,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40909,7 +40909,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40921,7 +40921,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40933,7 +40933,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40945,7 +40945,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40957,7 +40957,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40969,7 +40969,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40981,7 +40981,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -40993,7 +40993,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41005,7 +41005,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41017,7 +41017,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41029,7 +41029,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41041,7 +41041,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41053,7 +41053,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41065,7 +41065,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41077,7 +41077,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41089,7 +41089,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41101,7 +41101,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41113,7 +41113,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41125,7 +41125,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41137,7 +41137,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41149,7 +41149,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41161,7 +41161,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41173,7 +41173,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41185,7 +41185,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41197,7 +41197,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41209,7 +41209,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41221,7 +41221,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41233,7 +41233,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41245,7 +41245,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41257,7 +41257,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41269,7 +41269,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41281,7 +41281,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41293,7 +41293,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41305,7 +41305,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41317,7 +41317,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41329,7 +41329,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41341,7 +41341,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41353,7 +41353,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T0711",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41365,7 +41365,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41377,7 +41377,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41389,7 +41389,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41401,7 +41401,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41413,7 +41413,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41425,7 +41425,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41437,7 +41437,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41449,7 +41449,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41461,7 +41461,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41473,7 +41473,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41485,7 +41485,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41497,7 +41497,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41509,7 +41509,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41521,7 +41521,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41533,7 +41533,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41545,7 +41545,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41557,7 +41557,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41569,7 +41569,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41581,7 +41581,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41593,7 +41593,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41605,7 +41605,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41617,7 +41617,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41629,7 +41629,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41641,7 +41641,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41653,7 +41653,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41665,7 +41665,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41677,7 +41677,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41689,7 +41689,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41701,7 +41701,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41713,7 +41713,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41725,7 +41725,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41737,7 +41737,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41749,7 +41749,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41761,7 +41761,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41773,7 +41773,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41785,7 +41785,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41797,7 +41797,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41809,7 +41809,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41821,7 +41821,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41833,7 +41833,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41845,7 +41845,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41857,7 +41857,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41869,7 +41869,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41881,7 +41881,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T1534",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41893,7 +41893,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41905,7 +41905,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41917,7 +41917,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41929,7 +41929,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41941,7 +41941,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41953,7 +41953,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41965,7 +41965,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41977,7 +41977,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -41989,7 +41989,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42001,7 +42001,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42013,7 +42013,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42025,7 +42025,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42037,7 +42037,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42049,7 +42049,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42061,7 +42061,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42073,7 +42073,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42085,7 +42085,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42097,7 +42097,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42109,7 +42109,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42121,7 +42121,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42133,7 +42133,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42145,7 +42145,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42157,7 +42157,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42169,7 +42169,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42181,7 +42181,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42193,7 +42193,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42205,7 +42205,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42217,7 +42217,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42229,7 +42229,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42241,7 +42241,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42253,7 +42253,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42265,7 +42265,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42277,7 +42277,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42289,7 +42289,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42301,7 +42301,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42313,7 +42313,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42325,7 +42325,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42337,7 +42337,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42349,7 +42349,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42361,7 +42361,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42373,7 +42373,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42385,7 +42385,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42397,7 +42397,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42409,7 +42409,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261013T2359",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42421,7 +42421,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42433,7 +42433,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42445,7 +42445,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42457,7 +42457,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42469,7 +42469,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42481,7 +42481,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42493,7 +42493,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42505,7 +42505,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42517,7 +42517,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42529,7 +42529,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42541,7 +42541,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42553,7 +42553,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42565,7 +42565,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42577,7 +42577,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42589,7 +42589,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42601,7 +42601,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42613,7 +42613,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42625,7 +42625,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42637,7 +42637,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42649,7 +42649,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42661,7 +42661,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42673,7 +42673,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42685,7 +42685,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42697,7 +42697,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42709,7 +42709,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42721,7 +42721,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42733,7 +42733,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42745,7 +42745,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42757,7 +42757,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42769,7 +42769,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42781,7 +42781,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42793,7 +42793,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42805,7 +42805,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42817,7 +42817,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42829,7 +42829,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42841,7 +42841,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42853,7 +42853,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42865,7 +42865,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42877,7 +42877,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42889,7 +42889,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42901,7 +42901,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42913,7 +42913,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42925,7 +42925,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42937,7 +42937,7 @@
   },
   {
    "entry": "baselines/scanpy",
-   "version": "14 runs",
+   "version": "15 runs",
    "run": "20261014T0823",
    "size": "50k",
    "plan": "cbf3fb0c",
@@ -42946,6 +42946,534 @@
    "seed": 5,
    "step": "total",
    "value": 13.753
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 0,
+   "step": "pca",
+   "value": 9.23
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 0,
+   "step": "knn",
+   "value": 4.182
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 0,
+   "step": "cluster",
+   "value": 1.447
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 0,
+   "step": "total",
+   "value": 14.859
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 0,
+   "step": "pca",
+   "value": 9.259
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 0,
+   "step": "knn",
+   "value": 4.205
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 0,
+   "step": "cluster",
+   "value": 1.46
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 0,
+   "step": "total",
+   "value": 14.927
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 0,
+   "step": "pca",
+   "value": 9.154
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 0,
+   "step": "knn",
+   "value": 4.231
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 0,
+   "step": "cluster",
+   "value": 1.455
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 0,
+   "step": "total",
+   "value": 14.841
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 0,
+   "step": "pca",
+   "value": 9.252
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 0,
+   "step": "knn",
+   "value": 4.205
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 0,
+   "step": "cluster",
+   "value": 1.449
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 0,
+   "step": "total",
+   "value": 14.907
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 0,
+   "step": "pca",
+   "value": 9.241
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 0,
+   "step": "knn",
+   "value": 4.201
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 0,
+   "step": "cluster",
+   "value": 1.457
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 0,
+   "step": "total",
+   "value": 14.899
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 5,
+   "seed": 0,
+   "step": "pca",
+   "value": 9.285
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 5,
+   "seed": 0,
+   "step": "knn",
+   "value": 4.247
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 5,
+   "seed": 0,
+   "step": "cluster",
+   "value": 1.526
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 5,
+   "seed": 0,
+   "step": "total",
+   "value": 15.061
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 1,
+   "step": "pca",
+   "value": 9.295
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 1,
+   "step": "knn",
+   "value": 4.215
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 1,
+   "step": "cluster",
+   "value": 1.586
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 0,
+   "seed": 1,
+   "step": "total",
+   "value": 15.098
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 2,
+   "step": "pca",
+   "value": 9.288
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 2,
+   "step": "knn",
+   "value": 4.187
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 2,
+   "step": "cluster",
+   "value": 1.472
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 1,
+   "seed": 2,
+   "step": "total",
+   "value": 14.948
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 3,
+   "step": "pca",
+   "value": 9.15
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 3,
+   "step": "knn",
+   "value": 4.171
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 3,
+   "step": "cluster",
+   "value": 1.466
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 2,
+   "seed": 3,
+   "step": "total",
+   "value": 14.787
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 4,
+   "step": "pca",
+   "value": 9.259
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 4,
+   "step": "knn",
+   "value": 4.097
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 4,
+   "step": "cluster",
+   "value": 1.485
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 3,
+   "seed": 4,
+   "step": "total",
+   "value": 14.842
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 5,
+   "step": "pca",
+   "value": 9.217
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 5,
+   "step": "knn",
+   "value": 4.124
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 5,
+   "step": "cluster",
+   "value": 1.458
+  },
+  {
+   "entry": "baselines/scanpy",
+   "version": "15 runs",
+   "run": "20261014T1646",
+   "size": "50k",
+   "plan": "cbf3fb0c",
+   "host": "c931f405",
+   "rep": 4,
+   "seed": 5,
+   "step": "total",
+   "value": 14.799
   },
   {
    "entry": "baselines/scanpy",
